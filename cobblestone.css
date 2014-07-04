@@ -487,6 +487,7 @@
     
     /* Allow only vertical resizing of textareas. */
     textarea {
+        resize: vertical;
     }
 
 
