@@ -4,7 +4,7 @@
    
     /*
      * CSS NORMALIZE
-     * BASE STYLES  //h1-h6, a, blockquote, code, pre, abr, img, text-right, text uppercase, text muted
+     * BASE STYLES  //h1-h6, a, blockquote, code, pre, abr, img
      * GRID SYSTEM //row, col, @media
      * LAYOUT STYLES // containers, wrappers, embed, img crop, gallery, panel, table styles       //container, div, wrapper
      * FORMAT STYLES // text-right, text-muted, big, strong, labels, form styles, link and button
@@ -460,6 +460,11 @@
               box-sizing: border-box;
     }
         
+    html {
+        font-size: 1.15em;
+        line-height: 1.4;
+    }
+    
     hr {
         display: block;
         height: 1px;
@@ -490,11 +495,16 @@
         resize: vertical;
     }
 
-
-
-
-
-
+    h1 { font-size: 3em; margin: .35em 0em;}
+    h2 { font-size: 2.5em; margin: .35em 0em; }
+    h3 { font-size: 1.75em; margin: .35em 0em; }
+    h4 { font-size: 1.50em; margin: .35em 0em; }
+    h5 { font-size: 1.35em; margin: .35em 0em; }
+    h6 { font-size: 1.15em; margin:.35em 0em;}
+    
+    /* Padding on bullet points */
+    li {padding-left: .4em;}
+    
 /* ============================================================================
    .::[ PRINT STYLES ]::.
 ============================================================================ */
