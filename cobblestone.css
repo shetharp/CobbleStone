@@ -482,7 +482,7 @@
     fieldset {
         border: 0;
         margin: 0;
-        padding: 10;
+        padding: 10px;
     }
     
     /* Allow only vertical resizing of textareas. */
