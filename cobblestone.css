@@ -473,12 +473,12 @@
 /*  Base Link Styles
 ================================================== */    
     a {
-        color: rgb(66, 139, 202);
+        color: #A63B32;
         text-decoration: none;
     }
 
     a:hover {
-        color: #2A6496;
+        color: #802D27;
         text-decoration: underline;
     }
     
@@ -548,7 +548,7 @@
     
     blockquote {
         color: #777;
-        border-left: 3px solid #777;
+        border-left: 3px solid #A63B32;;
         padding: .5em .5em .5em 1.25em;
         font-style: italic;
         margin-left: 1.55em;
@@ -627,6 +627,9 @@
 /* ============================================================================
    .::[ GRID SYSTEM ]::.
 ============================================================================ */
+    
+    /* Mobile first responsive grid system */
+    
     body { border-bottom: 10px solid gray; }
     .row:before,
     .row:after {
@@ -638,7 +641,9 @@
         clear: both;
     }
     
-    *[class*="col-"] { width: 100%; margin-bottom: 10px; background: rgba(0,0,0,.05);}
+    *[class*="col-"] {
+        width: 100%;
+    }
     
     .row *[class*="col-"] {
         display: block;
@@ -748,7 +753,13 @@
         background-image: none;
         border: 1px solid transparent;
         border-radius: 2px;
-        box-shadow: 0 3px 7px 0px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);  
+        box-shadow: 0 3px 7px 0px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
+        
+-webkit-transition: all 150ms ease-in-out;
+-moz-transition: all 150ms ease-in-out;
+-ms-transition: all 150ms ease-in-out;
+-o-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
     }
     
     .btn:hover,
@@ -794,8 +805,24 @@
         color: #333;
         background-color: rgba(255,255,255,1);
     }
-    
 
+    .btn-flat {
+        box-shadow: none;
+    }
+    
+    .btn-primary {
+        color: #FFF;
+        background: #A63B32;
+    }
+    
+    .btn-primary:hover {
+        color: #FFF;
+    }
+    
+    .btn-primary:active {
+        background: #802D27;;
+    }
+    
     
 /* ============================================================================
    .::[ PRINT STYLES ]::.
