@@ -547,7 +547,12 @@
 
     li { padding-left: .5em; }
     
-    a, a:visited {
+    
+/* ============================================================================
+   .::[ FORMAT STYLES ]::.
+============================================================================ */
+ 
+     a, a:visited {
         color: rgb(66, 139, 202);
         text-decoration: none;
     }
@@ -556,36 +561,52 @@
         color: #2A6496;
         text-decoration: underline;
     }
-    
-/**** BUTTONS ****/
+
 
     .btn,
     button,
     input[type="submit"],
     input[type="reset"],
     input[type="button"] {
-        color: rgb(145, 40, 20);
-        background: #D3D3D3;
+        color: rgb(66, 139, 202);
+        background: #fff;
         border: none;
-        border-bottom: 3px solid #7a7a7a !important;
         padding: .35em 1em;
-        margin-bottom: -3px;
-        
-        font-family: inherit;
         font-size: .75em;
-        font-weight: bold;
-        text-decoration: none;
-        line-height: normal;
+        border: 1px solid #61C4F3;
         
-        cursor: pointer;
-        display: inline-block;
-        
-        text-shadow: 0px 1px 0px #efefef;
-        filter: dropshadow(color=#efefef, offx=0, offy=1);
+        text-shadow: 0px 2px 0px #FFF;
+        filter: dropshadow(color=#FFF, offx=0, offy=1);
         -webkit-border-radius: 5px;
-        border-radius: 5px; 
+        border-radius: 5px;
+        
+-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+    }
     
-    
+    .btn:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover {
+        color: rgb(66, 139, 202);
+        
+-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
+box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
+        
+    }
+
+    .btn:active,
+    button:active,
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    input[type="button"]:active {
+        color: #333333;
+        background: #E5E5E5;
+        text-shadow: none;
+    } 
+ 
+ 
 /* ============================================================================
    .::[ PRINT STYLES ]::.
 ============================================================================ */
