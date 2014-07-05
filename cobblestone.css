@@ -543,10 +543,11 @@
         color: #E1601A;
         padding: .2em .5em;
         background: #efefef;
-        border-radius: 0.5em;
+        border-radius: 0.2em;
     }
     
     blockquote {
+        color: #777;
         border-left: 3px solid #777;
         padding: .5em .5em .5em 1.25em;
         font-style: italic;
@@ -626,8 +627,91 @@
 /* ============================================================================
    .::[ GRID SYSTEM ]::.
 ============================================================================ */
+    body { border-bottom: 10px solid gray; }
+    .row:before,
+    .row:after {
+        content: "";
+        display: table;
+    }
+    
+    .row:after {
+        clear: both;
+    }
+    
+    *[class*="col-"] { width: 100%; margin-bottom: 10px; background: rgba(0,0,0,.05);}
+    
+    .row *[class*="col-"] {
+        display: block;
+        float: left;
+        margin-right: 3.5%;
+    }
+    
+    .row *[class*="col-"]:last-child {
+        margin-right: 0;
+    }
+    
+    .sm-nomarg {
+        margin-right: 0 !important;
+    }
+    
+    .sm-col-12 { width: 100%; }
+    .sm-col-11 { width: 91.375%; }
+    .sm-col-10 { width: 82.75%; }
+    .sm-col-9 { width: 74.125%; }
+    .sm-col-8 { width: 65.5%; }
+    .sm-col-7 { width: 56.875%; }
+    .sm-col-6 { width: 48.25%; }
+    .sm-col-5 { width: 39.625%; }
+    .sm-col-4 { width: 31%; }
+    .sm-col-3 { width: 22.375%; }
+    .sm-col-2 { width: 13.75%; }
+    .sm-col-1 { width: 5.125%; }
+    
+@media only screen and (min-width: 35em) {
+    body { border-bottom: 10px solid orange; }
+    
+    .sm-nomarg {
+        margin-right: 3.5% !important;
+    }
+    .nomarg {
+        margin-right: 0 !important;
+    }
+    
+    .col-12 { width: 100%; }
+    .col-11 { width: 91.375%; }
+    .col-10 { width: 82.75%; }
+    .col-9 { width: 74.125%; }
+    .col-8 { width: 65.5%; }
+    .col-7 { width: 56.875%; }
+    .col-6 { width: 48.25%; }
+    .col-5 { width: 39.625%; }
+    .col-4 { width: 31%; }
+    .col-3 { width: 22.375%; }
+    .col-2 { width: 13.75%; }
+    .col-1 { width: 5.125%; }
 
+}
 
+@media only screen and (min-width: 65em) {
+    body { border-bottom: 10px solid cyan; }
+    
+    .nomarg {
+        margin-right: 3.5% !important;
+    }
+    
+    .lg-col-12 { width: 100%; }
+    .lg-col-11 { width: 91.375%; }
+    .lg-col-10 { width: 82.75%; }
+    .lg-col-9 { width: 74.125%; }
+    .lg-col-8 { width: 65.5%; }
+    .lg-col-7 { width: 56.875%; }
+    .lg-col-6 { width: 48.25%; }
+    .lg-col-5 { width: 39.625%; }
+    .lg-col-4 { width: 31%; }
+    .lg-col-3 { width: 22.375%; }
+    .lg-col-2 { width: 13.75%; }
+    .lg-col-1 { width: 5.125%; }
+}
 
 /* ============================================================================
    .::[ LAYOUT STYLES ]::.
@@ -660,6 +744,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none;
+        background: transparent;
         background-image: none;
         border: 1px solid transparent;
         border-radius: 2px;
@@ -710,6 +795,7 @@
         background-color: rgba(255,255,255,1);
     }
     
+
     
 /* ============================================================================
    .::[ PRINT STYLES ]::.
