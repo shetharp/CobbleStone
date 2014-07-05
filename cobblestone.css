@@ -4,7 +4,7 @@
    
     /*
      * CSS NORMALIZE
-     * BASE STYLES  //h1-h6, a, blockquote, code, pre, abr, img
+     * BASE STYLES
      * GRID SYSTEM //row, col, @media
      * LAYOUT STYLES // containers, wrappers, embed, img crop, gallery, panel, table styles       //container, div, wrapper
      * FORMAT STYLES // text-right, text-muted, big, strong, labels, form styles, link and button
@@ -17,7 +17,7 @@
    .::[ CSS NORMALIZE ]::.
 ============================================================================ */
     
-    /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+    /*! normalize.css v3.1 | MIT License | git.io/normalize */
 
     /**
      * 1. Set default font family to sans-serif.
@@ -87,7 +87,7 @@
     }
     
     /**
-     * Address `[hidden]` styling not present in IE 8/9/10.
+     * Address `[hidden]` styling not present in IE 8/9/1
      * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
      */
     
@@ -100,7 +100,7 @@
        ========================================================================== */
     
     /**
-     * Remove the gray background color from active links in IE 10.
+     * Remove the gray background color from active links in IE 1
      */
     
     a {
@@ -151,7 +151,7 @@
     
     h1 {
       font-size: 2em;
-      margin: 0.67em 0;
+      margin: 67em 0;
     }
     
     /**
@@ -184,18 +184,18 @@
     }
     
     sup {
-      top: -0.5em;
+      top: -5em;
     }
     
     sub {
-      bottom: -0.25em;
+      bottom: -25em;
     }
     
     /* Embedded content
        ========================================================================== */
     
     /**
-     * Remove border when inside `a` element in IE 8/9/10.
+     * Remove border when inside `a` element in IE 8/9/1
      */
     
     img {
@@ -297,7 +297,7 @@
     }
     
     /**
-     * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+     * 1. Avoid the WebKit bug in Android 4.* where (2) destroys native `audio`
      *    and `video` controls.
      * 2. Correct inability to style clickable `input` types in iOS.
      * 3. Improve usability and consistency of cursor style between image-type
@@ -344,8 +344,8 @@
      * It's recommended that you don't attempt to style these elements.
      * Firefox's implementation doesn't respect box-sizing, padding, or width.
      *
-     * 1. Address box sizing set to `content-box` in IE 8/9/10.
-     * 2. Remove excess padding in IE 8/9/10.
+     * 1. Address box sizing set to `content-box` in IE 8/9/1
+     * 2. Remove excess padding in IE 8/9/1
      */
     
     input[type="checkbox"],
@@ -396,7 +396,7 @@
     fieldset {
       border: 1px solid #c0c0c0;
       margin: 0 2px;
-      padding: 0.35em 0.625em 0.75em;
+      padding: 35em 625em 75em;
     }
     
     /**
@@ -448,6 +448,8 @@
    .::[ BASE STYLES ]::.
 ============================================================================ */
     
+/*  Border-box Sizing Method
+================================================== */
     * {
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;
@@ -459,13 +461,132 @@
          -moz-box-sizing: border-box;
               box-sizing: border-box;
     }
-        
+
+/*  Base Body Styles
+================================================== */        
     body {
         font-size: 1.15em;
         line-height: 1.4;
         color: #333;
     }
+
+/*  Base Link Styles
+================================================== */    
+    a {
+        color: rgb(66, 139, 202);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #2A6496;
+        text-decoration: underline;
+    }
     
+/*  Base Heading Styles
+================================================== */    
+    h1 { font-size: 3em; margin: .35em 0em;}
+    h2 { font-size: 2.5em; margin: .35em 0em; }
+    h3 { font-size: 1.75em; margin: .35em 0em; }
+    h4 { font-size: 1.50em; margin: .35em 0em; }
+    h5 { font-size: 1.35em; margin: .35em 0em; }
+    h6 { font-size: 1.15em; margin:.35em 0em;}
+    
+    h1 small,
+    h2 small,
+    h3 small,
+    h4 small,
+    h5 small,
+    h6 small {
+        font-weight: normal;
+        color: #777;
+    }
+
+/*  Base Typography Styles
+================================================== */      
+    p {
+        margin-bottom: .8em;
+    }
+
+    p.lead {
+        font-size: 1.3em;
+    }
+
+    i,
+    em {
+        font-style: italic;
+    }
+
+    b,
+    strong {
+        font-weight: bold;
+    }
+    
+    big {
+        font-size: 1.25em;
+    }
+    
+    small {
+        font-size: .8em;
+    }
+
+    mark {
+        padding: .2em;
+        background: #fcf8e3;
+    }
+    
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: Consolas, Menlo, "Courier New", monospace;
+        font-size: 0.9em;
+        color: #E1601A;
+        padding: .2em .5em;
+        background: #efefef;
+        border-radius: 0.5em;
+    }
+    
+    blockquote {
+        border-left: 3px solid #777;
+        padding: .5em .5em .5em 1.25em;
+        font-style: italic;
+        margin-left: 1.55em;
+        
+    }
+    
+    blockquote footer,
+    blockquote small {
+        font-size: .8em;
+        font-style: italic;
+        color: #777;
+    }
+
+/*  Base Link Styles
+================================================== */  
+    ol.no-style,
+    ul.no-style {
+        list-style: none outside;
+    }
+    
+    ol.inline,
+    ul.inline {
+        margin: 0; padding: 0;
+    }
+    
+    ol.inline > li,
+    ul.inline > li {
+        display: inline-block;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+    
+    ul.square { list-style: square outside; }
+    ul.circle { list-style: circle outside; }
+    
+    li { padding-left: 0.5em; }
+
+/*  Base Object Styles
+================================================== */      
     hr {
         display: block;
         height: 1px;
@@ -473,6 +594,11 @@
         border-top: 1px solid #ccc;
         margin: 1em 0;
         padding: 0;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
     }
     
     /* Remove the gap between images, videos, audio and canvas and the bottom of
@@ -496,145 +622,48 @@
         resize: vertical;
     }
     
-    h1 { font-size: 3em; margin: .35em 0em;}
-    h2 { font-size: 2.5em; margin: .35em 0em; }
-    h3 { font-size: 1.75em; margin: .35em 0em; }
-    h4 { font-size: 1.50em; margin: .35em 0em; }
-    h5 { font-size: 1.35em; margin: .35em 0em; }
-    h6 { font-size: 1.15em; margin:.35em 0em;}
-    
-    h1 small,
-    h2 small,
-    h3 small,
-    h4 small,
-    h5 small,
-    h6 small {
-        font-weight: normal;
-        color: #777;
-    }
-    
-    p {
-        margin-bottom: 0.8em;
-    }
 
-    p.lead {
-        font-size: 1.3em;
-    }
+/* ============================================================================
+   .::[ GRID SYSTEM ]::.
+============================================================================ */
 
-    i,
-    em {
-        font-style: italic;
-    }
 
-    b,
-    strong {
-        font-weight: bold;
-    }
-    
-    big {
-        font-size: 1.25em;
-    }
-    
-    small {
-        font-size: 0.8em;
-    }
 
-    mark {
-        padding: 0.2em;
-        background: #fcf8e3;
-    }
-    
-    code,
-    kbd,
-    pre,
-    samp {
-        font-family: Consolas, Menlo, "Courier New", monospace;
-        font-size: 0.9em;
-        color: #E1601A;
-        padding: 0.2em 0.5em;
-        background: #efefef;
-        border-radius: 0.5em;
-    }
-    
-    blockquote {
-        border-left: 3px solid #777;
-        padding: 0.5em 0.5em 0.5em 1.25em;
-        font-style: italic;
-        margin-left: 1.55em;
-        
-    }
-    
-    blockquote footer,
-    blockquote small {
-        font-size: 0.8em;
-        font-style: italic;
-        color: #777;
-    }
+/* ============================================================================
+   .::[ LAYOUT STYLES ]::.
+============================================================================ */
 
-    ol.no-style,
-    ul.no-style {
-        list-style: none outside;
-    }
-    
-    ol.inline,
-    ul.inline {
-        margin: 0; padding: 0;
-    }
-    
-    ol.inline > li,
-    ul.inline > li {
-        display: inline-block;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-    
-    ul.square { list-style: square outside; }
-    ul.circle { list-style: circle outside; }
-    
-    li { padding-left: 0.5em; }
-    
-    img {
-        max-width: 100%;
-        height: auto;
-        vertical-align: middle;
-    }
-    
-    
-    
+
 /* ============================================================================
    .::[ FORMAT STYLES ]::.
 ============================================================================ */
- 
-     a, a:visited {
-        color: rgb(66, 139, 202);
-        text-decoration: none;
-    }
 
-    a:hover {
-        color: #2A6496;
-        text-decoration: underline;
-    }
-
+    
+/*  Button Styles
+================================================== */  
 
     .btn,
     button,
     input[type="submit"],
     input[type="reset"],
     input[type="button"] {
-        color: rgb(66, 139, 202);
-        background: #fff;
-        border: none;
-        padding: .35em 1em;
-        font-size: .75em;
-        border: 1px solid #61C4F3;
-        
-        text-shadow: 0px 2px 0px #FFF;
-        filter: dropshadow(color=#FFF, offx=0, offy=1);
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        
--webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
-box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
+        display: inline-block;
+        padding: 1em 2em;
+        margin: 0 .5em;
+        font-size: .85em;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        box-shadow: 0 3px 7px 0px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);  
     }
     
     .btn:hover,
@@ -642,24 +671,46 @@ box-shadow: 0 0 4px 0 rgba(0,0,0,.5);
     input[type="submit"]:hover,
     input[type="reset"]:hover,
     input[type="button"]:hover {
-        color: rgb(66, 139, 202);
-        
--webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
-box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
-        
+        text-decoration: none;
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
     }
-
-    .btn:active,
-    button:active,
-    input[type="submit"]:active,
-    input[type="reset"]:active,
-    input[type="button"]:active {
-        color: #333333;
-        background: #E5E5E5;
-        text-shadow: none;
-    } 
- 
- 
+    
+    .btn:focus,
+    button:focus,
+    input[type="submit"]:focus,
+    input[type="reset"]:focus,
+    input[type="button"]:focus {
+        box-shadow: 0 7px 20px 3px rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    }
+    
+    .btn-block {
+        display: block;
+        margin: 0;
+    }
+    
+    .btn-big {
+        font-size: 1em;
+        padding: 1.5em 3em;
+    }
+    
+    .btn-small {
+        font-size: .8em;
+        padding: .25em .75em;
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: rgba(250,250,250,1);
+    }
+    
+    .btn-default:hover,
+    .btn-default:focus,
+    .btn-default.active {
+        color: #333;
+        background-color: rgba(255,255,255,1);
+    }
+    
+    
 /* ============================================================================
    .::[ PRINT STYLES ]::.
 ============================================================================ */
@@ -716,7 +767,7 @@ box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
     }
 
     @page {
-        margin: 0.5cm;
+        margin: 5cm;
     }
 
     p,
