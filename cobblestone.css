@@ -460,9 +460,10 @@
               box-sizing: border-box;
     }
         
-    html {
+    body {
         font-size: 1.15em;
         line-height: 1.4;
+        color: #333;
     }
     
     hr {
@@ -533,19 +534,71 @@
     big {
         font-size: 1.25em;
     }
+    
     small {
-        font-size: 0.85em;
+        font-size: 0.8em;
     }
 
+    mark {
+        padding: 0.2em;
+        background: #fcf8e3;
+    }
+    
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: Consolas, Menlo, "Courier New", monospace;
+        font-size: 0.9em;
+        color: #E1601A;
+        padding: 0.2em 0.5em;
+        background: #efefef;
+        border-radius: 0.5em;
+    }
+    
     blockquote {
         border-left: 3px solid #777;
-        padding-left: 1.25em;
+        padding: 0.5em 0.5em 0.5em 1.25em;
         font-style: italic;
         margin-left: 1.55em;
         
     }
+    
+    blockquote footer,
+    blockquote small {
+        font-size: 0.8em;
+        font-style: italic;
+        color: #777;
+    }
 
-    li { padding-left: .5em; }
+    ol.no-style,
+    ul.no-style {
+        list-style: none outside;
+    }
+    
+    ol.inline,
+    ul.inline {
+        margin: 0; padding: 0;
+    }
+    
+    ol.inline > li,
+    ul.inline > li {
+        display: inline-block;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    
+    ul.square { list-style: square outside; }
+    ul.circle { list-style: circle outside; }
+    
+    li { padding-left: 0.5em; }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    
     
     
 /* ============================================================================
@@ -676,7 +729,7 @@ box-shadow: 0 0 4px 0 rgba(0,0,0,.7);
     h2,
     h3 {
         page-break-after: avoid;
-}
+    }
     
 /*  Customized Print Styles
 ================================================== */
