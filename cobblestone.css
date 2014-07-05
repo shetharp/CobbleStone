@@ -482,16 +482,54 @@
     fieldset {
         border: 0;
         margin: 0;
-        padding: 10px;
+        padding: 0;
     }
     
     /* Allow only vertical resizing of textareas. */
     textarea {
         resize: vertical;
     }
+    
+    h1 small,
+    h2 small,
+    h3 small,
+    h4 small,
+    h5 small,
+    h6 small {
+        color: #777;
+    }
+    
+    p {
+        margin-bottom: 0.8em;
+    }
 
+    p.lead {
+        font-size: 1.3em;
+    }
 
+    i,
+    em {
+        font-style: italic;
+    }
 
+    b,
+    strong {
+        font-weight: bold;
+    }
+    
+    big {
+        font-size: 1.25em;
+    }
+    small {
+        font-size: 0.85em;
+    }
+
+    blockquote {
+        border-left: 2px solid #777;
+        padding-left: 0.4em;
+        font-style: italic;
+        
+    }
 
 
 
