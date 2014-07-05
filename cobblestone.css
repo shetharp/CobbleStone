@@ -538,16 +538,54 @@
     }
 
     blockquote {
-        border-left: 2px solid #777;
-        padding-left: 0.4em;
+        border-left: 3px solid #777;
+        padding-left: 1.25em;
         font-style: italic;
+        margin-left: 1.55em;
         
     }
 
-    li { padding-left: .4em; }
+    li { padding-left: .5em; }
     
+    a, a:visited {
+        color: rgb(66, 139, 202);
+        text-decoration: none;
+    }
 
+    a:hover {
+        color: #2A6496;
+        text-decoration: underline;
+    }
+    
+/**** BUTTONS ****/
 
+    .btn,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+        color: rgb(145, 40, 20);
+        background: #D3D3D3;
+        border: none;
+        border-bottom: 3px solid #7a7a7a !important;
+        padding: .35em 1em;
+        margin-bottom: -3px;
+        
+        font-family: inherit;
+        font-size: .75em;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: normal;
+        
+        cursor: pointer;
+        display: inline-block;
+        
+        text-shadow: 0px 1px 0px #efefef;
+        filter: dropshadow(color=#efefef, offx=0, offy=1);
+        -webkit-border-radius: 5px;
+        border-radius: 5px; 
+    
+    
 /* ============================================================================
    .::[ PRINT STYLES ]::.
 ============================================================================ */
