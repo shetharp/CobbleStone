@@ -5,7 +5,7 @@
     /*
      * CSS NORMALIZE
      * BASE STYLES
-     * GRID SYSTEM //row, col, @media
+     * GRID SYSTEM
      * LAYOUT STYLES // containers, wrappers, embed, img crop, gallery, panel, table styles       //container, div, wrapper
      * FORMAT STYLES // text-right, text-muted, big, strong, labels, form styles, link and button
      * HELPER STYLES: HIDDEN, PULL-RIGHT, 
@@ -672,55 +672,81 @@
     .sm-col-2 { width: 13.75%; }
     .sm-col-1 { width: 5.125%; }
     
-@media only screen and (min-width: 35em) {
-    body { border-bottom: 10px solid orange; }
+    /* Normal Display Grid */
+    @media only screen and (min-width: 35em) {
+        body { border-bottom: 10px solid orange; }
+        
+        .sm-nomarg {
+            margin-right: 3.5% !important;
+        }
+        .nomarg {
+            margin-right: 0 !important;
+        }
+        
+        .col-12 { width: 100%; }
+        .col-11 { width: 91.375%; }
+        .col-10 { width: 82.75%; }
+        .col-9 { width: 74.125%; }
+        .col-8 { width: 65.5%; }
+        .col-7 { width: 56.875%; }
+        .col-6 { width: 48.25%; }
+        .col-5 { width: 39.625%; }
+        .col-4 { width: 31%; }
+        .col-3 { width: 22.375%; }
+        .col-2 { width: 13.75%; }
+        .col-1 { width: 5.125%; }
     
-    .sm-nomarg {
-        margin-right: 3.5% !important;
     }
-    .nomarg {
-        margin-right: 0 !important;
-    }
-    
-    .col-12 { width: 100%; }
-    .col-11 { width: 91.375%; }
-    .col-10 { width: 82.75%; }
-    .col-9 { width: 74.125%; }
-    .col-8 { width: 65.5%; }
-    .col-7 { width: 56.875%; }
-    .col-6 { width: 48.25%; }
-    .col-5 { width: 39.625%; }
-    .col-4 { width: 31%; }
-    .col-3 { width: 22.375%; }
-    .col-2 { width: 13.75%; }
-    .col-1 { width: 5.125%; }
 
-}
-
-@media only screen and (min-width: 65em) {
-    body { border-bottom: 10px solid cyan; }
-    
-    .nomarg {
-        margin-right: 3.5% !important;
+    /* Large Display Grid */
+    @media only screen and (min-width: 65em) {
+        body { border-bottom: 10px solid cyan; }
+        
+        .nomarg {
+            margin-right: 3.5% !important;
+        }
+        
+        .lg-col-12 { width: 100%; }
+        .lg-col-11 { width: 91.375%; }
+        .lg-col-10 { width: 82.75%; }
+        .lg-col-9 { width: 74.125%; }
+        .lg-col-8 { width: 65.5%; }
+        .lg-col-7 { width: 56.875%; }
+        .lg-col-6 { width: 48.25%; }
+        .lg-col-5 { width: 39.625%; }
+        .lg-col-4 { width: 31%; }
+        .lg-col-3 { width: 22.375%; }
+        .lg-col-2 { width: 13.75%; }
+        .lg-col-1 { width: 5.125%; }
     }
-    
-    .lg-col-12 { width: 100%; }
-    .lg-col-11 { width: 91.375%; }
-    .lg-col-10 { width: 82.75%; }
-    .lg-col-9 { width: 74.125%; }
-    .lg-col-8 { width: 65.5%; }
-    .lg-col-7 { width: 56.875%; }
-    .lg-col-6 { width: 48.25%; }
-    .lg-col-5 { width: 39.625%; }
-    .lg-col-4 { width: 31%; }
-    .lg-col-3 { width: 22.375%; }
-    .lg-col-2 { width: 13.75%; }
-    .lg-col-1 { width: 5.125%; }
-}
 
 /* ============================================================================
    .::[ LAYOUT STYLES ]::.
 ============================================================================ */
+
+/*  Section and Container Styles
+================================================== */
+    .section {
+        padding: 3.5em 0;
+    }
+    
+    .section-inverted {
+        color: #fff;
+    }
+    
+    .section-inverted a,
+    .section-inverted a:hover {
+        color: #fff;    
+    }
+    
+    .section-primary {
+        background: #A63B32;
+    }
+    
+    .container {
+        width: 66.666666667%;
+        margin: auto;
+    }
 
 
 /* ============================================================================
@@ -755,11 +781,11 @@
         border-radius: 2px;
         box-shadow: 0 3px 7px 0px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
         
--webkit-transition: all 150ms ease-in-out;
--moz-transition: all 150ms ease-in-out;
--ms-transition: all 150ms ease-in-out;
--o-transition: all 150ms ease-in-out;
-transition: all 150ms ease-in-out;
+        -webkit-transition: all 150ms ease-in-out;
+        -moz-transition: all 150ms ease-in-out;
+        -ms-transition: all 150ms ease-in-out;
+        -o-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
     }
     
     .btn:hover,
@@ -776,7 +802,7 @@ transition: all 150ms ease-in-out;
     input[type="submit"]:focus,
     input[type="reset"]:focus,
     input[type="button"]:focus {
-        box-shadow: 0 7px 20px 3px rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+        box-shadow: 0 7px 20px 3px rgba(0,0,0,.35), 0 1px 2px 0 rgba(0,0,0,.2);
     }
     
     .btn-block {
@@ -811,15 +837,14 @@ transition: all 150ms ease-in-out;
     }
     
     .btn-primary {
-        color: #FFF;
+        color: #fff;
         background: #A63B32;
     }
     
-    .btn-primary:hover {
-        color: #FFF;
-    }
-    
+    .btn-primary:hover,
+    .btn-primary:focus,
     .btn-primary:active {
+        color: #fff;
         background: #802D27;;
     }
     
