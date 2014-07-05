@@ -6,7 +6,7 @@
      * CSS NORMALIZE
      * BASE STYLES
      * GRID SYSTEM
-     * LAYOUT STYLES // containers, wrappers, embed, img crop, gallery, panel, table styles       //container, div, wrapper
+     * LAYOUT STYLES // embed, img crop, gallery, panel, table styles       //container, div, wrapper
      * FORMAT STYLES // text-right, text-muted, big, strong, labels, form styles, link and button
      * HELPER STYLES: HIDDEN, PULL-RIGHT, 
      * CUSTOMIZED STYLES
@@ -305,9 +305,9 @@
      */
     
     button,
-    html input[type="button"], /* 1 */
-    input[type="reset"],
-    input[type="submit"] {
+    html input[type='button'], /* 1 */
+    input[type='reset'],
+    input[type='submit'] {
       -webkit-appearance: button; /* 2 */
       cursor: pointer; /* 3 */
     }
@@ -348,8 +348,8 @@
      * 2. Remove excess padding in IE 8/9/1
      */
     
-    input[type="checkbox"],
-    input[type="radio"] {
+    input[type='checkbox'],
+    input[type='radio'] {
       box-sizing: border-box; /* 1 */
       padding: 0; /* 2 */
     }
@@ -360,8 +360,8 @@
      * decrement button to change from `default` to `text`.
      */
     
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
       height: auto;
     }
     
@@ -371,7 +371,7 @@
      *    (include `-moz` to future-proof).
      */
     
-    input[type="search"] {
+    input[type='search'] {
       -webkit-appearance: textfield; /* 1 */
       -moz-box-sizing: content-box;
       -webkit-box-sizing: content-box; /* 2 */
@@ -384,8 +384,8 @@
      * padding (and `textfield` appearance).
      */
     
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-decoration {
+    input[type='search']::-webkit-search-cancel-button,
+    input[type='search']::-webkit-search-decoration {
       -webkit-appearance: none;
     }
     
@@ -538,7 +538,7 @@
     kbd,
     pre,
     samp {
-        font-family: Consolas, Menlo, "Courier New", monospace;
+        font-family: Consolas, Menlo, 'Courier New', monospace;
         font-size: 0.9em;
         color: #E1601A;
         padding: .2em .5em;
@@ -590,9 +590,9 @@
 ================================================== */      
     hr {
         display: block;
-        height: 1px;
+        height: 2px;
         border: 0;
-        border-top: 1px solid #ccc;
+        border-top: 2px solid #ccc;
         margin: 1em 0;
         padding: 0;
     }
@@ -630,10 +630,10 @@
     
     /* Mobile first responsive grid system */
     
-    body { border-bottom: 10px solid gray; }
+    body { border-left: 10px solid gray; }
     .row:before,
     .row:after {
-        content: "";
+        content: '';
         display: table;
     }
     
@@ -641,17 +641,17 @@
         clear: both;
     }
     
-    *[class*="col-"] {
+    *[class*='col-'] {
         width: 100%;
     }
     
-    .row *[class*="col-"] {
+    .row *[class*='col-'] {
         display: block;
         float: left;
         margin-right: 3.5%;
     }
     
-    .row *[class*="col-"]:last-child {
+    .row *[class*='col-']:last-child {
         margin-right: 0;
     }
     
@@ -674,7 +674,7 @@
     
     /* Normal Display Grid */
     @media only screen and (min-width: 35em) {
-        body { border-bottom: 10px solid orange; }
+        body { border-left: 10px solid orange; }
         
         .sm-nomarg {
             margin-right: 3.5% !important;
@@ -700,7 +700,7 @@
 
     /* Large Display Grid */
     @media only screen and (min-width: 65em) {
-        body { border-bottom: 10px solid cyan; }
+        body { border-left: 10px solid cyan; }
         
         .nomarg {
             margin-right: 3.5% !important;
@@ -749,6 +749,181 @@
     }
 
 
+/*  Gallery Styles
+================================================== */
+    .gallery {
+        width: 103.5%;
+        margin: 1em auto;
+    }
+    .gallery:before,
+    .gallery:after {
+        content:'';
+        display:table;
+    }
+    
+    .gallery:after {
+        clear: both;
+    }
+    
+    .gallery li {
+        width: 100%;
+        margin: 1em 0;
+        padding: 0;
+        border: 10px solid rgba(250,250,250,1);
+        background-color: rgba(250,250,250,1);
+        display: block;
+        overflow: hidden;
+        position: relative;
+        min-height: 3em;
+        
+        border-radius: 2px;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+        -webkit-transition: all 100ms ease-in-out;
+        -moz-transition: all 100ms ease-in-out;
+        -ms-transition: all 100ms ease-in-out;
+        -o-transition: all 100ms ease-in-out;
+        transition: all 100ms ease-in-out;
+    }
+    
+    .gallery li:hover {
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
+            
+    }
+        
+    .gallery li img,
+    .gallery li .media,
+    .gallery li .gallery-item {
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 1;
+        -webkit-transition: all 100ms ease-in-out;
+        -moz-transition: all 100ms ease-in-out;
+        -ms-transition: all 100ms ease-in-out;
+        -o-transition: all 100ms ease-in-out;
+        transition: all 100ms ease-in-out;
+    }
+    
+    .gallery li .gallery-item {
+        padding: .25em .75em;
+    }
+    .gallery li > a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .gallery li > a > .caption {
+        background: rgba(250,250,250,.95);
+        border: none;
+        color: inherit;
+        display: block;
+        padding: 20% 1em;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        transform: scale(.85);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transition: transform 100ms ease-out;
+    }
+
+    .gallery li > a:hover > .caption {
+        top: 0;
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .gallery li > a:hover .caption:after {
+        content: 'GO \25BA';
+        position: absolute;
+        left: 25%;
+        bottom: 25%;
+        display: block;
+        background: #333;
+        color: #efefef;
+        width: 50%;
+        padding: .5em;
+    }
+    
+    .gallery li > a.no-btn .caption:after,
+    .gallery li > a.no-style .caption:after {
+        display: none;
+    }
+    
+    .gallery li > a.no-style .caption,
+    .gallery li .caption {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        border-top: 2px solid #dfdfdf;
+        border-bottom: 2px solid #dfdfdf;
+        transform: scale(1);
+        top: 0;
+        padding: .5em .75em;
+        margin: .25em 0;
+        text-align: center;
+        color: #777;
+    }
+    
+    @keyframes flipInY {
+      0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -ms-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+      }
+    
+      40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -ms-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg);
+      }
+    
+      70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -ms-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg);
+      }
+    
+      100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -ms-transform: perspective(400px) rotateY(0deg);
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+      }
+    }
+        
+    /* Normal Display Grid */
+    @media only screen and (min-width: 35em) {
+        .gallery li {
+            width: 46.5%;
+            margin: 1.75% 3.5% 1.75% 0;
+            float: left;
+        }
+        
+        .gallery li > a > .caption {
+            top: -75%;
+            transition: top 100ms ease-out, transform 200ms ease-in;
+        }
+        
+        .gallery li > a:hover .caption:after {
+            animation: flipInY 1s;
+        }
+    }
+    
+    /* Large Display Grid */
+    @media only screen and (min-width: 65em) {
+        .gallery li {
+            width: 29.83333333333333%;
+        }
+    }
+    
+
 /* ============================================================================
    .::[ FORMAT STYLES ]::.
 ============================================================================ */
@@ -759,9 +934,9 @@
 
     .btn,
     button,
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"] {
+    input[type='submit'],
+    input[type='reset'],
+    input[type='button'] {
         display: inline-block;
         padding: 1em 2em;
         margin: 0 .5em;
@@ -781,27 +956,28 @@
         border-radius: 2px;
         box-shadow: 0 3px 7px 0px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
         
-        -webkit-transition: all 150ms ease-in-out;
-        -moz-transition: all 150ms ease-in-out;
-        -ms-transition: all 150ms ease-in-out;
-        -o-transition: all 150ms ease-in-out;
-        transition: all 150ms ease-in-out;
+        -webkit-transition: all 100ms ease-in-out;
+        -moz-transition: all 100ms ease-in-out;
+        -ms-transition: all 100ms ease-in-out;
+        -o-transition: all 100ms ease-in-out;
+        transition: all 100ms ease-in-out;
     }
     
     .btn:hover,
     button:hover,
-    input[type="submit"]:hover,
-    input[type="reset"]:hover,
-    input[type="button"]:hover {
+    input[type='submit']:hover,
+    input[type='reset']:hover,
+    input[type='button']:hover {
         text-decoration: none;
         box-shadow: 0 5px 10px 2px rgba(0,0,0,.25), 0 1px 2px 0 rgba(0,0,0,.2);
     }
     
     .btn:focus,
     button:focus,
-    input[type="submit"]:focus,
-    input[type="reset"]:focus,
-    input[type="button"]:focus {
+    input[type='submit']:focus,
+    input[type='reset']:focus,
+    input[type='button']:focus {
+        transform: scale(1.075);
         box-shadow: 0 7px 20px 3px rgba(0,0,0,.35), 0 1px 2px 0 rgba(0,0,0,.2);
     }
     
@@ -872,17 +1048,17 @@
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
 
     .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
+    a[href^='javascript:']:after,
+    a[href^='#']:after {
+        content: '';
     }
 
     pre,
