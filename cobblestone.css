@@ -1080,8 +1080,10 @@
         max-width: 100% !important;
     }
 
+    /* Reduced page margins */
+    
     @page {
-        margin: 5cm;
+        margin: 2.5cm;
     }
 
     p,
