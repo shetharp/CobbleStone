@@ -2,6 +2,7 @@
 .::[ TABLE OF CONTENTS ]::.
 ============================================================================ */
 
+    /*
      * CSS NORMALIZE
      * BASE STYLES
      * GRID SYSTEM
@@ -150,7 +151,7 @@
     */
     
     h1 {
-      font-size: 2em;
+      font-size: 2rem
       margin: 67em 0;
     }
     
@@ -853,23 +854,21 @@
       border-top: .06em solid #ddd;
     }
     
-    
     .table > thead > tr > th {
       vertical-align: bottom;
       border-bottom: .125em solid #ddd;
     }
     
-    
-    
     .table > tbody + tbody {
       border-top: .125em solid #ddd;
     }
-    
     
     .table .table {
       background-color: #fff;
     }
     
+/* Table Condensed 
+================================================== */
     .table-condensed > thead > tr > th,
     .table-condensed > tbody > tr > th,
     .table-condensed > tfoot > tr > th,
@@ -879,12 +878,13 @@
       padding: 0.1em;
     }
     
-    
     .table-bordered {
       border: .06em solid #ddd;
     }
     
-    
+/* Table with Borders
+================================================== */
+
     .table-bordered > thead > tr > th,
     .table-bordered > tbody > tr > th,
     .table-bordered > tfoot > tr > th,
@@ -894,25 +894,26 @@
       border: .06em solid #ddd;
     }
     
-    
     .table-bordered > thead > tr > th,
     .table-bordered > thead > tr > td {
       border-bottom-width: .125em;
     }
     
-    
+/* Table Striped
+================================================== */
+
     .table-striped > tbody > tr:nth-child(odd) > td,
     .table-striped > tbody > tr:nth-child(odd) > th {
       background-color: #f9f9f9;
     }
-    
     
     .table-hover > tbody > tr:hover > td,
     .table-hover > tbody > tr:hover > th {
       background-color: #f5f5f5;
     }
     
-    
+/* Table Row Default Highlight
+================================================== */
     .table > thead > tr > td.active,
     .table > tbody > tr > td.active,
     .table > tfoot > tr > td.active,
@@ -928,7 +929,8 @@
       background-color: #f5f5f5;
     }
     
-    
+/* Table Row Hover Highlight
+================================================== */
     .table-hover > tbody > tr > td.active:hover,
     .table-hover > tbody > tr > th.active:hover,
     .table-hover > tbody > tr.active:hover > td,
@@ -937,7 +939,7 @@
       background-color: #e8e8e8;
     }
     
-/*   Styles
+/*   Text Color Styles
 ================================================== */
 
     .text-muted {
@@ -952,35 +954,65 @@
         color: #A58F78;
     }
     
-    /* text right, left, etc. */
+    .text-right {
+        text-align: right;
+    }
     
+/* Text Alignment
+================================================== */
+
+    .text-left {
+        text-align: left;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .text-justify {
+        text-align: justify;
+    }
+    
+/* Text Labels (highlight)
+================================================== */
+
     .label {
-        display: inline-block;
+        display: inline;
+	    font-size: 0.8em;
         padding: .2em .5em;
-        border-radius: 0.5em;
-        background: #BF443A;
+        border-radius: 0.25em;
     }
     
     .label-default {
-        background: #DDDDDD;
+        color: #FFF;
+        background: #777;
     }
     
     .label-primary {
+        color: #fff;
         background: #BF443A;
     }
     
     .label-alt {
-        background: #CDBBA4;
+        color: #fff;
+        background: #A58F78;
     }
     
     
+/* Float Right, Left, Center
+================================================== */
+
     .pull-right {
         float: right;
     }
     
-    
     .pull-left {
+        float: left;
+    }
     
+    .pull-center {
+        margin-right: auto;
+        margin-left: auto;
     }
 
 /* Gallery Styles
@@ -988,6 +1020,7 @@
     .gallery {
         width: 103.5%;
         margin: 1em auto;
+        padding: 0em;
     }
     .gallery:before,
     .gallery:after {
@@ -1161,7 +1194,6 @@
 .::[ FORMAT STYLES ]::.
 ============================================================================ */
 
-    
 /* Button Styles
 ================================================== */
 
@@ -1257,6 +1289,33 @@
         background: #802D27;;
     }
     
+
+/* Form Style
+================================================== */
+
+    .panel {
+       margin-bottom: 1em;
+       border: 10px solid transparent;
+       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .panel-heading {
+        background: rgba(0, 0, 0, .05);
+        padding: 0.75em 1.375em;
+        margin: -10px -10px 0px -10px;
+    }
+    
+    .panel-title {
+        color: inherit;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .panel-body {
+       padding: .75em;
+    
+}
+
     
 /* ============================================================================
 .::[ PRINT STYLES ]::.
