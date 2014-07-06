@@ -563,7 +563,7 @@
         color: #777;
     }
 
-/* Base Link Styles
+/* Base List Styles
 ================================================== */
     ol.no-style,
     ul.no-style {
@@ -750,271 +750,6 @@
     }
 
 
-/* Media Crop and Case Objects
-================================================== */
-    
-    /* .media-crop abstract and default class */
-    .media-crop {
-        position: relative;
-        padding-bottom: 56.25%;	 /* 16:9 */
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .media-crop img,
-    .media-crop iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        border: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .media-crop iframe {
-        height: 100%;
-    }
-    
-    /* .media-crop modifier classes */
-    .media-crop-bar {
-        padding-bottom: 25%;
-    }
-    
-    
-    /* .media-case abstract and default class */
-    .media-contain {
-        width: 100%;
-        max-height: 15em;
-        overflow: hidden;
-        background: #333;
-    }
-    .media-contain img {
-        width: auto;
-        max-height: 15em;
-        display: block;
-        margin: auto;
-    }
-    
-    @media only screen and (min-height: 35em) {        
-        .media-contain,
-        .media-contain img{
-            max-height: 25em;
-        }
-    }
-    
-    @media only screen and (min-height: 45em) {
-        .media-contain,
-        .media-contain img {
-            width: auto;
-            max-height: 35em;
-        }
-    }
-    
-    @media only screen and (min-height: 65em) {
-        .media-contain,
-        .media-contain img {
-            width: auto;
-            max-height: 50em;
-        }
-    }
-    
-    
-
-
-
-/* Table Styles
-================================================== */
-
-    table {
-      background-color: transparent;
-    }
-    
-    th {
-      text-align: left;
-    }
-    
-    .table {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 1.2em;
-    }
-    
-    .table > thead > tr > th,
-    .table > tbody > tr > th,
-    .table > tfoot > tr > th,
-    .table > thead > tr > td,
-    .table > tbody > tr > td,
-    .table > tfoot > tr > td {
-      padding: .35em;
-      line-height: 1.42857143;
-      vertical-align: top;
-      border-top: .06em solid #ddd;
-    }
-    
-    .table > thead > tr > th {
-      vertical-align: bottom;
-      border-bottom: .125em solid #ddd;
-    }
-    
-    .table > tbody + tbody {
-      border-top: .125em solid #ddd;
-    }
-    
-    .table .table {
-      background-color: #fff;
-    }
-    
-/* Table Condensed 
-================================================== */
-    .table-condensed > thead > tr > th,
-    .table-condensed > tbody > tr > th,
-    .table-condensed > tfoot > tr > th,
-    .table-condensed > thead > tr > td,
-    .table-condensed > tbody > tr > td,
-    .table-condensed > tfoot > tr > td {
-      padding: 0.1em;
-    }
-    
-    .table-bordered {
-      border: .06em solid #ddd;
-    }
-    
-/* Table with Borders
-================================================== */
-
-    .table-bordered > thead > tr > th,
-    .table-bordered > tbody > tr > th,
-    .table-bordered > tfoot > tr > th,
-    .table-bordered > thead > tr > td,
-    .table-bordered > tbody > tr > td,
-    .table-bordered > tfoot > tr > td {
-      border: .06em solid #ddd;
-    }
-    
-    .table-bordered > thead > tr > th,
-    .table-bordered > thead > tr > td {
-      border-bottom-width: .125em;
-    }
-    
-/* Table Striped
-================================================== */
-
-    .table-striped > tbody > tr:nth-child(odd) > td,
-    .table-striped > tbody > tr:nth-child(odd) > th {
-      background-color: #f9f9f9;
-    }
-    
-    .table-hover > tbody > tr:hover > td,
-    .table-hover > tbody > tr:hover > th {
-      background-color: #f5f5f5;
-    }
-    
-/* Table Row Default Highlight
-================================================== */
-    .table > thead > tr > td.active,
-    .table > tbody > tr > td.active,
-    .table > tfoot > tr > td.active,
-    .table > thead > tr > th.active,
-    .table > tbody > tr > th.active,
-    .table > tfoot > tr > th.active,
-    .table > thead > tr.active > td,
-    .table > tbody > tr.active > td,
-    .table > tfoot > tr.active > td,
-    .table > thead > tr.active > th,
-    .table > tbody > tr.active > th,
-    .table > tfoot > tr.active > th {
-      background-color: #f5f5f5;
-    }
-    
-/* Table Row Hover Highlight
-================================================== */
-    .table-hover > tbody > tr > td.active:hover,
-    .table-hover > tbody > tr > th.active:hover,
-    .table-hover > tbody > tr.active:hover > td,
-    .table-hover > tbody > tr:hover > .active,
-    .table-hover > tbody > tr.active:hover > th {
-      background-color: #e8e8e8;
-    }
-    
-/*   Text Color Styles
-================================================== */
-
-    .text-muted {
-        color: #777;
-    }
-    
-    .text-primary {
-        color: #A63B32;
-    }
-    
-    .text-alt {
-        color: #A58F78;
-    }
-    
-    .text-right {
-        text-align: right;
-    }
-    
-/* Text Alignment
-================================================== */
-
-    .text-left {
-        text-align: left;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .text-justify {
-        text-align: justify;
-    }
-    
-/* Text Labels (highlight)
-================================================== */
-
-    .label {
-        display: inline;
-	    font-size: 0.8em;
-        padding: .2em .5em;
-        border-radius: 0.25em;
-    }
-    
-    .label-default {
-        color: #FFF;
-        background: #777;
-    }
-    
-    .label-primary {
-        color: #fff;
-        background: #BF443A;
-    }
-    
-    .label-alt {
-        color: #fff;
-        background: #A58F78;
-    }
-    
-    
-/* Float Right, Left, Center
-================================================== */
-
-    .pull-right {
-        float: right;
-    }
-    
-    .pull-left {
-        float: left;
-    }
-    
-    .pull-center {
-        margin-right: auto;
-        margin-left: auto;
-    }
-
 /* Gallery Styles
 ================================================== */
     .gallery {
@@ -1189,14 +924,274 @@
         }
     }
     
+/* Media Crop and Case Objects
+================================================== */
+    /* .media-crop abstract and default class */
+    .media-crop {
+        position: relative;
+        padding-bottom: 56.25%;	 /* 16:9 */
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .media-crop img,
+    .media-crop iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .media-crop iframe {
+        height: 100%;
+    }
+    
+    /* .media-crop modifier classes */
+    .media-crop-bar {
+        padding-bottom: 25%;
+    }
+    
+    
+    /* .media-case abstract and default class */
+    .media-contain {
+        width: 100%;
+        max-height: 15em;
+        overflow: hidden;
+        background: #333;
+    }
+    .media-contain img {
+        width: auto;
+        max-height: 15em;
+        display: block;
+        margin: auto;
+    }
+    
+    @media only screen and (min-height: 35em) {        
+        .media-contain,
+        .media-contain img{
+            max-height: 25em;
+        }
+    }
+    
+    @media only screen and (min-height: 45em) {
+        .media-contain,
+        .media-contain img {
+            width: auto;
+            max-height: 35em;
+        }
+    }
+    
+    @media only screen and (min-height: 65em) {
+        .media-contain,
+        .media-contain img {
+            width: auto;
+            max-height: 50em;
+        }
+    }
+    
+/* Panel Style
+================================================== */
+    .panel {
+       margin-bottom: 1em;
+       border: 10px solid transparent;
+       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .panel-heading {
+        background: rgba(0, 0, 0, .05);
+        padding: 0.75em 1.375em;
+        margin: -10px -10px 0px -10px;
+    }
+    
+    .panel-title {
+        color: inherit;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .panel-body {
+       padding: .75em;
+    }
+    
+/* Table Styles
+================================================== */
+    table {
+      background-color: transparent;
+    }
+    
+    th {
+      text-align: left;
+    }
+    
+    .table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1.2em;
+    }
+    
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+      padding: .35em;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border-top: .06em solid #ddd;
+    }
+    
+    .table > thead > tr > th {
+      vertical-align: bottom;
+      border-bottom: .125em solid #ddd;
+    }
+    
+    .table > tbody + tbody {
+      border-top: .125em solid #ddd;
+    }
+    
+    .table .table {
+      background-color: #fff;
+    }
+    
+/* Table Condensed 
+================================================== */
+    .table-condensed > thead > tr > th,
+    .table-condensed > tbody > tr > th,
+    .table-condensed > tfoot > tr > th,
+    .table-condensed > thead > tr > td,
+    .table-condensed > tbody > tr > td,
+    .table-condensed > tfoot > tr > td {
+      padding: 0.1em;
+    }
+    
+    .table-bordered {
+      border: .06em solid #ddd;
+    }
+    
+/* Table with Borders
+================================================== */
+    .table-bordered > thead > tr > th,
+    .table-bordered > tbody > tr > th,
+    .table-bordered > tfoot > tr > th,
+    .table-bordered > thead > tr > td,
+    .table-bordered > tbody > tr > td,
+    .table-bordered > tfoot > tr > td {
+      border: .06em solid #ddd;
+    }
+    
+    .table-bordered > thead > tr > th,
+    .table-bordered > thead > tr > td {
+      border-bottom-width: .125em;
+    }
+    
+/* Table Striped
+================================================== */
+    .table-striped > tbody > tr:nth-child(odd) > td,
+    .table-striped > tbody > tr:nth-child(odd) > th {
+      background-color: #f9f9f9;
+    }
+    
+    .table-hover > tbody > tr:hover > td,
+    .table-hover > tbody > tr:hover > th {
+      background-color: #f5f5f5;
+    }
+    
+/* Table Row Default Highlight
+================================================== */
+    .table > thead > tr > td.active,
+    .table > tbody > tr > td.active,
+    .table > tfoot > tr > td.active,
+    .table > thead > tr > th.active,
+    .table > tbody > tr > th.active,
+    .table > tfoot > tr > th.active,
+    .table > thead > tr.active > td,
+    .table > tbody > tr.active > td,
+    .table > tfoot > tr.active > td,
+    .table > thead > tr.active > th,
+    .table > tbody > tr.active > th,
+    .table > tfoot > tr.active > th {
+      background-color: #f5f5f5;
+    }
+    
+/* Table Row Hover Highlight
+================================================== */
+    .table-hover > tbody > tr > td.active:hover,
+    .table-hover > tbody > tr > th.active:hover,
+    .table-hover > tbody > tr.active:hover > td,
+    .table-hover > tbody > tr:hover > .active,
+    .table-hover > tbody > tr.active:hover > th {
+      background-color: #e8e8e8;
+    }
+
 
 /* ============================================================================
 .::[ FORMAT STYLES ]::.
 ============================================================================ */
 
+/*   Text Color Styles
+================================================== */
+    .text-muted {
+        color: #777;
+    }
+    
+    .text-primary {
+        color: #A63B32;
+    }
+    
+    .text-alt {
+        color: #A58F78;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+/* Text Alignment
+================================================== */
+    .text-left {
+        text-align: left;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .text-justify {
+        text-align: justify;
+    }
+    
+/* Text Labels (highlight)
+================================================== */
+    .label {
+        display: inline;
+	    font-size: 0.8em;
+        padding: .2em .5em;
+        border-radius: 0.25em;
+    }
+    
+    .label-default {
+        color: #FFF;
+        background: #777;
+    }
+    
+    .label-primary {
+        color: #fff;
+        background: #BF443A;
+    }
+    
+    .label-alt {
+        color: #fff;
+        background: #A58F78;
+    }
+    
 /* Button Styles
 ================================================== */
-
     .btn,
     button,
     input[type='submit'],
@@ -1293,30 +1288,27 @@
 /* Form Style
 ================================================== */
 
-    .panel {
-       margin-bottom: 1em;
-       border: 10px solid transparent;
-       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+/* ============================================================================
+.::[ HELPER STYLES ]::.
+============================================================================ */
+
+/* Float Right, Left, Center
+================================================== */
+    .pull-right {
+        float: right;
     }
     
-    .panel-heading {
-        background: rgba(0, 0, 0, .05);
-        padding: 0.75em 1.375em;
-        margin: -10px -10px 0px -10px;
+    .pull-left {
+        float: left;
     }
     
-    .panel-title {
-        color: inherit;
-        margin-top: 0;
-        margin-bottom: 0;
+    .pull-center {
+        margin-right: auto;
+        margin-left: auto;
     }
 
-    .panel-body {
-       padding: .75em;
-    
-}
 
-    
 /* ============================================================================
 .::[ PRINT STYLES ]::.
 ============================================================================ */
