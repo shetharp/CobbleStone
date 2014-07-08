@@ -8,8 +8,8 @@
      * GRID SYSTEM
      * LAYOUT STYLES
      * IMAGES AND MEDIA
-     * FORMAT STYLES // text-right, text-muted, big, strong, labels, form styles, link and button
-     * HELPER STYLES: HIDDEN, PULL-RIGHT, 
+     * FORMAT STYLES
+     * HELPER STYLES
      * CUSTOMIZED STYLES
      * PRINT STYLES
     */
@@ -1463,6 +1463,26 @@
         display: block;
         visibility: visible;
     }
+
+
+
+
+/* ============================================================================
+.::[ CUSTOMIZED STYLES ]::.
+============================================================================ */
+
+    /* Your site-specific styles here.
+     * If you wish to keep your site styles in a seperate file, make sure the
+     * print style sheets are loaded last, to overwrite all styles.
+     *
+     * You may make customizations to the CobbleStone framework by overwriting
+     * the styles here, or where the specific styles are originally declared.
+     *
+     * Happy designing!
+     * 
+     */
+
+
 
 
 /* ============================================================================
