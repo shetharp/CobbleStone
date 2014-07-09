@@ -541,10 +541,10 @@
     pre,
     samp {
         font-family: Consolas, Menlo, monospace;
-        font-size: 0.9em;
-        color: #E1601A;
+        font-size: 0.85em;
+        color: #802D27;
         padding: .2em .5em;
-        background: #efefef;
+        background: #F2ECE6;
         border-radius: 0.2em;
     }
     
