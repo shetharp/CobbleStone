@@ -33,6 +33,7 @@
 		#sidebar { background: #806854; }		
 		main .section { padding-left: 3.5%; padding-right: 3.5%; }
 		main .section:nth-child(even) { background: rgba(250,250,250,1); }
+		main .section-primary { background: #A63B32 !important; }
 	</style>
 	
 </head>
@@ -55,6 +56,8 @@
 		<ul class="no-style">
 			<li><a href="#normalize">CSS Normalize</a></li>
 			<li><a href="#base">Base Styles</a></li>
+			<li><a href="#grid">Grid System</a></li>
+			<li><a href="#layout">Layout Styles</a></li>
 		</ul>
 	</section>
 	
@@ -70,17 +73,596 @@
 				<h2>Base Styles</h2>
 				<p class="lead">Defines the base styles of the page. Establishes consistent typography, colors, and margins for several HTML elements.</p>
 				
+				<hr>
+
+<!-- Base Heading Styles
+================================================== -->					
+				<h3>Headings</h3>
 				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				<h1>Header One <small>Subheader</small></h1>
-				
+				<h2>Header Two <small>Subheader</small></h2>
+				<h3>Header Three <small>Subheader</small></h3>
+				<h4>Header Four <small>Subheader</small></h4>
+				<h5>Header Five <small>Subheader</small></h5>
+				<h6>Header Six <small>Subheader</small></h6>
 				<pre>&lt;h1&gt;Header One &lt;small&gt;Subheader&lt;/small&gt;&lt;/h1&gt;</pre>
+				
+				<hr>
+					
+				<h3>Typography</h3>
+				
+				<div class="row">
+					<div class="col-6">
+						<h4><small>Lead Paragraph</small></h4>
+						<pre>&lt;p class=&quot;lead&quot;&gt;Text&lt;/p&gt;</pre>
+						<p class="lead">Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id.</p>
+					</div>
+					
+					<div class="col-6">
+						<h4><small>Paragraph</small></h4>
+						<pre>&lt;p&gt;Text&lt;/p&gt;</pre>
+						<p>Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id. Falli pertinacia voluptaria ex duo, te habemus atomorum eum, duo dicant efficiendi cu. Latine neglegentur interpretaris eu eos, vim ad delenit alienum. Honestatis instructior eu vix, mel ut case tractatos, has etiam munere philosophia an.</p>
+					</div>
+				</div> <!-- END row -->
+				
+<!-- Base Typography Styles
+================================================== -->				
+				<h4><small>Text-Level Symantics</small></h4>
+				
+				<div class="row">
+					
+						<div class="col-6"><pre>&lt;i&gt;, &lt;em&gt;</pre></div>
+						<div class="col-6"><i>Lorem ipsizzle daahng dawg sit amet</i></div>
+					
+				</div>
+				<div class="row">	
+						<div class="col-6"><pre>&lt;a&gt;</pre></div>
+						<div class="col-6"><a href="#">Cheesy grin bocconcini cheesy grin</a></div>
+				</div>
+				
+				<div class="row">	
+						<div class="col-6"><pre>&lt;b&gt;, &lt;strong&gt;</pre></div>
+						<div class="col-6"><b>to us never something within you</b></div>
+					</div>
+				<div class="row">	
+						<div class="col-6"><pre>&lt;big&gt;</pre></div>
+						<div class="col-6"><big>a motivated a ordinary </big></div>
+					</div>
+				<div class="row">	
+						<div class="col-6"><pre>&lt;small&gt;</pre></div>
+						<div class="col-6"><small>In daahng dawg crackalackin nizzle nisi pellentesque</small></div>
+					</div>
+				<div class="row">	
+						<div class="col-6"><pre>&lt;mark&gt;</pre></div>
+						<div class="col-6"><mark>often wonders some is deeds </mark></div>
+					</div>
+				<div class="row">	
+						<div class="col-6"><pre>&lt;code&gt;, &lt;kbd&gt;, &lt;pre&gt;, &lt;samp&gt;</pre></div>
+						<div class="col-6"><pre>&lt;p class=&quot;lead&quot;&gt;Maecenas mofo erizzle.&lt;/p&gt;</pre></div>
+					</div>
+				
+				
+				<hr>
+					
+				<h4><small>Blockquote</small></h4>
+				<blockquote>
+					<p>Either write something worth reading or do something worth writing.</p>
+					<small>Benjamin Franklin</small>
+				</blockquote>
+				
+				<pre>&lt;blockquote&gt;<br>&nbsp;&lt;p&gt;Quotation&lt;/p&gt;<br>&nbsp;&lt;small&gt;Source&lt;/small&gt;&nbsp;&nbsp; ** &lt;footer&gt; can be used too. ** <br>&lt;/blockquote&gt;</pre>
+				
+				<hr>
+
+<!-- Base List Styles
+================================================== -->				
+				<h3>Lists</h3>
+				<div class="row">
+					<div class="col-4">
+						
+						<ol>
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ol>
+						
+						<pre>&lt;ol&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+
+					</div>
+					<div class="col-4">
+						
+						<ul>
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ul>
+						
+					<pre>&lt;ol&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+						
+					</div>
+					
+					<div class="col-4">
+						
+						<ul class="square">
+							<li>Item 1</li>
+							<li>Item 2</li>
+						
+							<ul class="circle">
+								<li>Item 3</li>
+								<li>Item 4</li>
+							</ul>
+						</ul>
+
+						<pre>&lt;ul class=&quot;square&quot;&gt;<br>&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>&nbsp;&nbsp;&lt;ul class=&quot;circle&quot;&gt;<br>&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Item 4&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/ul&gt;</pre>
+					</div>
+				</div>
+				
+				<div class="row">
+
+					<div class="col-4">
+						
+						<ol class="inline">
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ol>
+						
+					<pre>&lt;ol class="inline"&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+				
+					</div>
+					<div class="col-4">
+						<ol class="no-style">
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ol>
+
+						<pre>&lt;ol class="no-style"&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+
+					</div>
+				</div>
+			
+			<hr>
+
+<!-- Base Object Styles
+================================================== -->				
+			<h3>Objects</h3>
+				<h4><small>Horizontal Row</small></h4>
+				<pre>&lt;hr&gt;</pre>
+				<hr>
+					
+				<h4><small>Other stuff...</small></h4>
+			
+			
 			</section> <!-- END #base -->
-		</div>
+
+<!-- ============================================================================
+.::[ GRID SYSTEM ]::.
+============================================================================ -->
+
+			<section id="grid" class="section">
+				<h2>Grid System</h2>
+			</section> <!-- END #grid -->
+			
+<!-- ============================================================================
+.::[ LAYOUT STYLES ]::.
+============================================================================ -->
+
+			<section id="layout" class="section">
+				<h2>Layout Styles</h2>
+				
+<!-- Section and Container Styles
+================================================== -->
+				<h3>Sections & Container</h3>
+				<h4><small>Section</small></h4>
+				<div class="section">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+				<pre>&lt;div class=&quot;section&quot;&gt;</pre>
+				<h4><small>Section Inverted</small></h4>
+				<p>(Not displayed). <br>For dark backgrounds, use the class "section-invereted" so your text will be a light color.</p>
+				<pre>&lt;div class=&quot;section section-inverted&quot;&gt;</pre>
+				<h4><small>Section Primary</small></h4>
+				<div class="section section-primary">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+				<pre>&lt;div class=&quot;section section-primary&quot;&gt;</pre>
+				<h4><small>Container</small></h4>
+				<div class="container">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+				<pre>&lt;div class=&quot;container&quot;&gt;</pre>
+				
+				
+<!-- Panel Style
+================================================== -->
+				<h3>Panels</h3>
+				
+				<div class="row">
+					<div class="col-6">
+						<pre>&lt;div class=&quot;panel&quot;&gt;</pre>
+						<pre>	&lt;div class=&quot;panel-heading&quot;&gt;</pre>
+						<pre>		&lt;div class=&quot;panel-title&quot;&gt;</pre>
+						<pre>	&lt;div class=&quot;panel-body&quot;&gt;</pre>
+					</div>
+					<div class="col-6">
+						<div class="panel">
+							<div class="panel-heading">
+								<div class="panel-title">Title of Panel</div>
+							</div>
+							<div class="panel-body">
+								This is the body of the panel.
+								<p>Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Pariatur velit, felis arcu libero.</p>
+							</div>
+						</div>
+					</div>
+				</div> <!-- END .row -->
+				
+<!-- Table Styles
+================================================== -->
+				
+				<h3>Table Styles</h3>
+				<h4><small>Default Table</small></h4>
+				<table class="table">
+					<tr>
+						<th>Table Heading</th>
+						<th>Table Heading</th>
+						<th>Table Heading</th>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+				</table>
+				
+			<div class="row">
+			<h4 class="col-6"><small>Table Condensed</small></h4>
+			<h4 class="col-6"><small>Table Bordered</small></h4>
+			</div>
+				<div class="row">
+					<div class="col-6">
+						<table class=" table table-condensed">
+							<tr>
+								<th>Table Heading</th>
+								<th>Table Heading</th>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="col-6">
+						<table class=" table table-bordered">
+							<tr>
+								<th>Table Heading</th>
+								<th>Table Heading</th>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+						</table>
+					</div>
+				</div> <!-- END .row -->
+				
+				<div class="row">
+					<div class="col-6">
+<pre>&lt;table class=&quot;table table-condensed&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<div class="col-6">
+<pre>&lt;table class=&quot;table table-bordered&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+					</div>
+				</div> <!-- END .row -->
+				
+				<hr>
+				
+				<div class="row">
+				<h4 class="col-6"><small>Table Striped</small></h4>
+				<h4 class="col-6"><small>Table Hover</small></h4>
+				</div>
+				
+				<div class="row">
+					<div class="col-6">
+						<table class=" table table-striped">
+							<tr>
+								<th>Table Heading</th>
+								<th>Table Heading</th>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="col-6">
+						<table class=" table table-hover">
+							<tr>
+								<th>Table Heading</th>
+								<th>Table Heading</th>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+							<tr>
+								<td>Table Data</td>
+								<td>Table Data</td>
+							</tr>
+						</table>
+					</div>
+				</div> <!-- END .row -->
+				
+				<div class="row">
+					<div class="col-6">
+<pre>&lt;table class=&quot;table table-striped&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<div class="col-6">
+<pre>&lt;table class=&quot;table table-hover&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+		&lt;th&gt;Table Heading&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+		&lt;td&gt;Table Data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+					</div>
+				</div> <!-- END .row -->
+
+<!-- Image Styles
+================================================== -->			
+				<h3>Images</h3>
+
+
+<!-- Gallery Styles
+================================================== -->
+				<h3>Gallery</h3>
+			</section> <!-- END #layout  -->
+			
+			<section class="section">
+				<h2>Format Styles</h2>
+			
+<!--   Text Color Styles
+================================================== -->	
+				<h3>Text Color</h3>
+				<div class="row">
+					<div class="col-8">
+						<p class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+					</div>
+					<div class="col-4">
+					<pre>&lt;p class=&quot;text-muted&quot;&gt;</pre>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-8">
+						<p class="text-primary">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
+					</div>
+					<div class="col-4">
+						<pre>&lt;p class=&quot;text-primary&quot;&gt;</pre>	
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-8">
+						<p class="text-alt">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large.</p>
+					</div>
+					<div class="col-4">
+						<pre>&lt;p class=&quot;text-alt&quot;&gt;</pre>
+					</div>
+				</div>
+					
+				<h3>Text Alignment</h3>
+				<div class="row">
+					<div class="col-4">
+					<pre>&lt;p class=&quot;text-right&quot;&gt;<br><br>&lt;p class=&quot;text-left&quot;&gt;</pre>
+					</div>
+					<div class="col-8">
+						<p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+					<pre>&lt;p class=&quot;text-center&quot;&gt;</pre>
+					</div>
+					<div class="col-8">
+						<p class="text-center">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+					<pre>&lt;p class=&quot;text-justify&quot;&gt;</pre>
+					</div>
+					<div class="col-8">
+						<p class="text-justify">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language o</p>
+					</div>
+				</div>
+				
+				<h3>Text Labels</h3>
+				
+				<p><b>Default Label: </b><span class="label label-default">consectetuer adipiscing</span></p>
+				<pre>&lt;span class=&quot;label label-default&quot;&gt;</pre><br>
+				<p><b>Primary Label: </b><span class="label label-primary">consectetuer adipiscing</span></p>
+				<pre>&lt;span class=&quot;label label-primary&quot;&gt;</pre><br>
+				<p><b>Alternate Label: </b><span class="label label-alt">consectetuer adipiscing</span></p>
+				<pre>&lt;span class=&quot;label label-alt&quot;&gt;</pre><br>
+				<hr>
+					
+				<h3>Buttons</h3>
+					<div class="row">
+						<div class="col-5">
+							<div class="btn">
+								No Style Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-block">
+								Block Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-block&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-big">
+								Big Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-big&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-small">
+								Small Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-small&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-default">
+								Default Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-default&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-flat">
+								Flat Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-flat&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-primary">
+								Primary Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-primary&quot;&gt;</pre>
+						</div>
+					</div>
+					
+					<br>
+						
+					<div class="row">
+						<div class="col-5">
+							<div class="btn btn-block btn-big btn-flat btn-primary">
+								Combined Button
+							</div>
+						</div>
+						<div class="col-7">
+							<pre>&lt;button class=&quot;btn btn-block btn-big btn-flat btn-primary&quot;&gt;</pre>
+						</div>
+					</div>
+					
+				
+			
+<!-- Form Style
+================================================== -->
+				<h3>Forms</h3>
+				
+			</section> <!-- END section -->
+			
+		</div> <!-- END wrapper -->
 	</main>
 </div> <!-- END .row -->
 
@@ -97,7 +679,7 @@
 			Feel free to modify the boilerplate to suit your needs.<br />
 			Happy Designing!
 		</p>
-		<small
+		<small>
 			<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">CobbleStone Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://shethworks.com" property="cc:attributionName" rel="cc:attributionURL">Arpit Sheth</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.	
 		</small>
 	</div>
