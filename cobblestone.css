@@ -506,6 +506,7 @@
 /* Base Typography Styles
 ================================================== */
     p {
+        margin: 0;
         margin-bottom: .8em;
     }
 
