@@ -645,14 +645,18 @@
         width: 100%;
     }
     
-    .row *[class*='col-'] {
+    .row > *[class*='col-'] {
         display: block;
         float: left;
         margin-right: 3.5%;
     }
     
-    .row *[class*='col-']:last-child {
+    .row > *[class*='col-']:last-child {
         margin-right: 0;
+    }
+    
+    .all-nomarg {
+        margin-right: 0 !important;
     }
     
     .sm-nomarg {
@@ -788,7 +792,7 @@
     
     .panel-heading {
         background: rgba(0, 0, 0, .05);
-        padding: .15rem 1.375rem;
+        padding: .625rem 1.375rem;
         margin: -.625rem -.625rem 0 -.625rem;
     }
     
@@ -879,7 +883,7 @@
 ================================================== */
     .table-striped > tbody > tr:nth-child(odd) > td,
     .table-striped > tbody > tr:nth-child(odd) > th {
-      background-color: #f9f9f9;
+      background-color: #f5f5f5;
     }
     
     .table-hover > tbody > tr:hover > td,
@@ -920,7 +924,18 @@
 ============================================================================ */
 
 /* Image Styles
-================================================== */
+================================================== */ 
+    /* Styled the same as img */
+    .media {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    figure {
+        max-width: 100%;
+        margin: 1em auto;
+    }
+    
     figcaption,
     .caption {
         display: block;
@@ -931,17 +946,6 @@
         text-align: center;
         color: #777;
         font-weight: bold;
-    }
-    
-    /* Styled the same as img */
-    .media {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    figure {
-        max-width: 100%;
-        margin: 1em auto;
     }
     
     .thumbnail {
@@ -1004,7 +1008,7 @@
     
     /* .media-crop modifier classes */
     .media-crop-bar {
-        padding-bottom: 25%;
+        padding-bottom: 33.333333333%;
     }
     
     /* Vertically Responsive Images and Media */
@@ -1365,6 +1369,7 @@
     }
 
     .btn-flat {
+        background: transparent;
         box-shadow: none;
     }
     
@@ -1482,8 +1487,35 @@
      * 
      */
 
+    /* All Mobile-first responsive code here. */
+    
 
 
+
+    /* Normal Display Grid */
+    @media only screen and (min-width: 35em) {
+
+    }
+    
+    /* Intermediate Display Grid (Not a major break-point by default) */
+    @media only screen and (min-width: 45em) {
+
+    }
+    
+    /* Large Display Grid */
+    @media only screen and (min-width: 65em) {
+
+    }
+    
+    /* Larger Display Grid (Not a major break-point by default) */
+    @media only screen and (min-width: 75em) {
+
+    }
+    
+    /* Extra Large Display Grid */
+    @media only screen and (min-width: 80em) {
+
+    }
 
 /* ============================================================================
 .::[ PRINT STYLES ]::.

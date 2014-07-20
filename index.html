@@ -34,6 +34,8 @@
 		main .section { padding-left: 3.5%; padding-right: 3.5%; }
 		main .section:nth-child(even) { background: rgba(250,250,250,1); }
 		main .section-primary { background: #A63B32 !important; }
+		.show-grid { margin: .5em 0; }
+		.show-grid > div { border: .125rem solid #CB4341; color: #CB4341; text-align: center; padding: .25em; }
 	</style>
 	
 </head>
@@ -51,620 +53,1153 @@
 	
 <!-- Primary Page Layout
 ================================================== -->
-<div class="row">
-	<section id="sidebar" class="section-inverted col-3">
-		<ul class="no-style">
+<section id="sidebar" class="section section-inverted">
+	<div class="text-center">
+		<ul class="inline">
 			<li><a href="#normalize">CSS Normalize</a></li>
 			<li><a href="#base">Base Styles</a></li>
 			<li><a href="#grid">Grid System</a></li>
 			<li><a href="#layout">Layout Styles</a></li>
+			<li><a href="#images">Images and Media</a></li>
+			<li><a href="#format">Format Styles</a></li>
+			<li><a href="#helper">Helper Styles</a></li>
+			<li><a href="#print">Print Styles</a></li>
 		</ul>
-	</section>
+	</div>
+</section>
+<main class="col-9 pull-center">
+	<div class="container">
+		<hr>
+		<p class="text-muted">
+			<em>
+				Development of the CobbleStone Boilerplate is partially inspired by a variety of sources including
+				<a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>,
+				<a href="http://getbootstrap.com/">Twitter Bootstrap</a>, and
+				<a href="http://www.google.com/design/spec/material-design/introduction.html">Google Material Design</a>.
+			</em>
+		</p>
+		<hr>
+	</div>
+		
+	<section id="normalize" class="section">
+		<h2>CSS Normalize</h2>
+		<p class="lead">Based on <a href="http://necolas.github.com/normalize.css">Normalize.css</a> by Nicolas Gallagher. No modifications were made directly to it.</p>
+	</section> <!-- END #normalize -->
 	
-	<main class="col-8">
-		<div class="wrapper">
-			
-			<section id="normalize" class="section">
-				<h2>CSS Normalize</h2>
-				<p class="lead">Based on <a href="http://necolas.github.com/normalize.css">Normalize.css</a> by Nicolas Gallagher. No modifications were made directly to it.</p>
-			</section> <!-- END #normalize -->
-			
-			<section id="base" class="section">
-				<h2>Base Styles</h2>
-				<p class="lead">Defines the base styles of the page. Establishes consistent typography, colors, and margins for several HTML elements.</p>
-				
-				<hr>
+	<section id="base" class="section">
+		<h2>Base Styles</h2>
+		<p class="lead">Defines the base styles of the page. Establishes consistent typography, colors, and margins for several HTML elements.</p>
+		
+		<hr>
 
 <!-- Base Heading Styles
 ================================================== -->					
-				<h3>Headings</h3>
-				<h1>Header One <small>Subheader</small></h1>
-				<h2>Header Two <small>Subheader</small></h2>
-				<h3>Header Three <small>Subheader</small></h3>
-				<h4>Header Four <small>Subheader</small></h4>
-				<h5>Header Five <small>Subheader</small></h5>
-				<h6>Header Six <small>Subheader</small></h6>
-				<pre>&lt;h1&gt;Header One &lt;small&gt;Subheader&lt;/small&gt;&lt;/h1&gt;</pre>
-				
-				<hr>
-					
-				<h3>Typography</h3>
-				
-				<div class="row">
-					<div class="col-6">
-						<h4><small>Lead Paragraph</small></h4>
-						<pre>&lt;p class=&quot;lead&quot;&gt;Text&lt;/p&gt;</pre>
-						<p class="lead">Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id.</p>
-					</div>
-					
-					<div class="col-6">
-						<h4><small>Paragraph</small></h4>
-						<pre>&lt;p&gt;Text&lt;/p&gt;</pre>
-						<p>Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id. Falli pertinacia voluptaria ex duo, te habemus atomorum eum, duo dicant efficiendi cu. Latine neglegentur interpretaris eu eos, vim ad delenit alienum. Honestatis instructior eu vix, mel ut case tractatos, has etiam munere philosophia an.</p>
-					</div>
-				</div> <!-- END row -->
-				
+		<h3>Headings</h3>
+		<h1>Header One <small>Subheader</small></h1>
+		<h2>Header Two <small>Subheader</small></h2>
+		<h3>Header Three <small>Subheader</small></h3>
+		<h4>Header Four <small>Subheader</small></h4>
+		<h5>Header Five <small>Subheader</small></h5>
+		<h6>Header Six <small>Subheader</small></h6>
+		<pre>&lt;h1&gt;Header One &lt;small&gt;Subheader&lt;/small&gt;&lt;/h1&gt;</pre>
+		
+		<hr>
+			
+		<h3>Typography</h3>
+		
+		<div class="row">
+			<div class="col-6">
+				<h4><small>Lead Paragraph</small></h4>
+				<pre>&lt;p class=&quot;lead&quot;&gt;Text&lt;/p&gt;</pre>
+				<p class="lead">Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id.</p>
+			</div>
+			
+			<div class="col-6">
+				<h4><small>Paragraph</small></h4>
+				<pre>&lt;p&gt;Text&lt;/p&gt;</pre>
+				<p>Lorem ipsum dolor sit amet, an eum sale aliquid, pri vidit facer euripidis in, eos movet hendrerit complectitur id. Ludus voluptua comprehensam in est, alia reprimique an his, est nulla eruditi expetendis id. Falli pertinacia voluptaria ex duo, te habemus atomorum eum, duo dicant efficiendi cu. Latine neglegentur interpretaris eu eos, vim ad delenit alienum. Honestatis instructior eu vix, mel ut case tractatos, has etiam munere philosophia an.</p>
+			</div>
+		</div> <!-- END row -->
+		
 <!-- Base Typography Styles
 ================================================== -->				
-				<h4><small>Text-Level Symantics</small></h4>
-				
-				<div class="row">
-					
-						<div class="col-6"><pre>&lt;i&gt;, &lt;em&gt;</pre></div>
-						<div class="col-6"><i>Lorem ipsizzle daahng dawg sit amet</i></div>
-					
-				</div>
-				<div class="row">	
-						<div class="col-6"><pre>&lt;a&gt;</pre></div>
-						<div class="col-6"><a href="#">Cheesy grin bocconcini cheesy grin</a></div>
-				</div>
-				
-				<div class="row">	
-						<div class="col-6"><pre>&lt;b&gt;, &lt;strong&gt;</pre></div>
-						<div class="col-6"><b>to us never something within you</b></div>
-					</div>
-				<div class="row">	
-						<div class="col-6"><pre>&lt;big&gt;</pre></div>
-						<div class="col-6"><big>a motivated a ordinary </big></div>
-					</div>
-				<div class="row">	
-						<div class="col-6"><pre>&lt;small&gt;</pre></div>
-						<div class="col-6"><small>In daahng dawg crackalackin nizzle nisi pellentesque</small></div>
-					</div>
-				<div class="row">	
-						<div class="col-6"><pre>&lt;mark&gt;</pre></div>
-						<div class="col-6"><mark>often wonders some is deeds </mark></div>
-					</div>
-				<div class="row">	
-						<div class="col-6"><pre>&lt;code&gt;, &lt;kbd&gt;, &lt;pre&gt;, &lt;samp&gt;</pre></div>
-						<div class="col-6"><pre>&lt;p class=&quot;lead&quot;&gt;Maecenas mofo erizzle.&lt;/p&gt;</pre></div>
-					</div>
-				
-				
-				<hr>
-					
-				<h4><small>Blockquote</small></h4>
-				<blockquote>
-					<p>Either write something worth reading or do something worth writing.</p>
-					<small>Benjamin Franklin</small>
-				</blockquote>
-				
-				<pre>&lt;blockquote&gt;<br>&nbsp;&lt;p&gt;Quotation&lt;/p&gt;<br>&nbsp;&lt;small&gt;Source&lt;/small&gt;&nbsp;&nbsp; ** &lt;footer&gt; can be used too. ** <br>&lt;/blockquote&gt;</pre>
-				
-				<hr>
+		<h4><small>Text-Level Symantics</small></h4>
+		
+		<div class="row">
+			
+				<div class="col-6"><pre>&lt;i&gt;, &lt;em&gt;</pre></div>
+				<div class="col-6"><i>Lorem ipsizzle daahng dawg sit amet</i></div>
+			
+		</div>
+		<div class="row">	
+				<div class="col-6"><pre>&lt;a&gt;</pre></div>
+				<div class="col-6"><a href="#">Cheesy grin bocconcini cheesy grin</a></div>
+		</div>
+		
+		<div class="row">	
+				<div class="col-6"><pre>&lt;b&gt;, &lt;strong&gt;</pre></div>
+				<div class="col-6"><b>to us never something within you</b></div>
+			</div>
+		<div class="row">	
+				<div class="col-6"><pre>&lt;big&gt;</pre></div>
+				<div class="col-6"><big>a motivated a ordinary </big></div>
+			</div>
+		<div class="row">	
+				<div class="col-6"><pre>&lt;small&gt;</pre></div>
+				<div class="col-6"><small>In daahng dawg crackalackin nizzle nisi pellentesque</small></div>
+			</div>
+		<div class="row">	
+				<div class="col-6"><pre>&lt;mark&gt;</pre></div>
+				<div class="col-6"><mark>often wonders some is deeds </mark></div>
+			</div>
+		<div class="row">	
+				<div class="col-6"><pre>&lt;code&gt;, &lt;kbd&gt;, &lt;pre&gt;, &lt;samp&gt;</pre></div>
+				<div class="col-6"><pre>&lt;p class=&quot;lead&quot;&gt;Maecenas mofo erizzle.&lt;/p&gt;</pre></div>
+			</div>
+		
+		
+		<hr>
+			
+		<h4><small>Blockquote</small></h4>
+		<blockquote>
+			<p>Either write something worth reading or do something worth writing.</p>
+			<small>Benjamin Franklin</small>
+		</blockquote>
+		
+		<pre>&lt;blockquote&gt;<br> &lt;p&gt;Quotation&lt;/p&gt;<br> &lt;small&gt;Source&lt;/small&gt;&nbsp;&nbsp;<br> <em>&lt;!-- &lt;footer&gt; can be used too.&lt;/footer&gt; --&gt;</em><br>&lt;/blockquote&gt;</pre>
+		
+		<hr>
 
 <!-- Base List Styles
 ================================================== -->				
-				<h3>Lists</h3>
-				<div class="row">
-					<div class="col-4">
-						
-						<ol>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-						</ol>
-						
-						<pre>&lt;ol&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
-
-					</div>
-					<div class="col-4">
-						
-						<ul>
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-						</ul>
-						
-					<pre>&lt;ol&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
-						
-					</div>
-					
-					<div class="col-4">
-						
-						<ul class="square">
-							<li>Item 1</li>
-							<li>Item 2</li>
-						
-							<ul class="circle">
-								<li>Item 3</li>
-								<li>Item 4</li>
-							</ul>
-						</ul>
-
-						<pre>&lt;ul class=&quot;square&quot;&gt;<br>&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>&nbsp;&nbsp;&lt;ul class=&quot;circle&quot;&gt;<br>&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Item 4&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/ul&gt;</pre>
-					</div>
-				</div>
+		<h3>Lists</h3>
+		<div class="row">
+			<div class="col-4">
 				
-				<div class="row">
-
-					<div class="col-4">
-						
-						<ol class="inline">
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-						</ol>
-						
-					<pre>&lt;ol class="inline"&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+				<ol>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
 				
-					</div>
-					<div class="col-4">
-						<ol class="no-style">
-							<li>Item 1</li>
-							<li>Item 2</li>
-							<li>Item 3</li>
-						</ol>
+				<pre>&lt;ol&gt;<br> &lt;li&gt;Item 1&lt;/li&gt;<br> &lt;li&gt;Item 2&lt;/li&gt;<br> &lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
 
-						<pre>&lt;ol class="no-style"&gt;<br>&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;li&gt;Item 2&lt;/li&gt;<br>&lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
-
-					</div>
-				</div>
+			</div>
+			<div class="col-4">
+				
+				<ul>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ul>
+				
+			<pre>&lt;ol&gt;<br> &lt;li&gt;Item 1&lt;/li&gt;<br> &lt;li&gt;Item 2&lt;/li&gt;<br> &lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+				
+			</div>
 			
-			<hr>
+			<div class="col-4">
+				
+				<ul class="square">
+					<li>Item 1</li>
+					<li>Item 2</li>
+				
+					<ul class="circle">
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ul>
+				</ul>
+
+				<pre>&lt;ul class=&quot;square&quot;&gt;<br> &lt;li&gt;Item 1&lt;/li&gt;<br> &lt;li&gt;Item 2<br>  &lt;ul class=&quot;circle&quot;&gt;<br>   &lt;li&gt;Item 3&lt;/li&gt;<br>   &lt;li&gt;Item 4&lt;/li&gt;<br>  &lt;/ul&gt;<br> &lt;/li&gt;<br>&lt;/ul&gt;</pre>
+			</div>
+		</div>
+		
+		<div class="row">
+
+			<div class="col-4">
+				
+				<ol class="inline">
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
+				
+			<pre>&lt;ol class="inline"&gt;<br> &lt;li&gt;Item 1&lt;/li&gt;<br> &lt;li&gt;Item 2&lt;/li&gt;<br> &lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+		
+			</div>
+			<div class="col-4">
+				<ol class="no-style">
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
+
+				<pre>&lt;ol class="no-style"&gt;<br> &lt;li&gt;Item 1&lt;/li&gt;<br> &lt;li&gt;Item 2&lt;/li&gt;<br> &lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ol&gt;</pre>
+
+			</div>
+		</div>
+	
+	<hr>
 
 <!-- Base Object Styles
 ================================================== -->				
-			<h3>Objects</h3>
-				<h4><small>Horizontal Row</small></h4>
-				<pre>&lt;hr&gt;</pre>
-				<hr>
-					
-				<h4><small>Other stuff...</small></h4>
-			
-			
-			</section> <!-- END #base -->
+	<h3>Objects</h3>
+		<h4><small>Horizontal Row</small></h4>
+		<pre>&lt;hr&gt;</pre>
+		<hr>
+	</section> <!-- END #base -->
 
 <!-- ============================================================================
 .::[ GRID SYSTEM ]::.
 ============================================================================ -->
+	<section id="grid" class="section">
+		<h2>Grid System</h2>
+		<p class="lead">
+			CobbleStone comes with a robust grid system that has a mobile-first approach.
+			It supports complex layouts by featuring 12 column spans per row, as well nesting the grid system.
+			Elements can also use the column span classes to get the same width, without having to position the element as part of the grid.
+		</p>
+		
+		<hr>
+		
+		<h4>Grid System Basics</h4>
+		<h4><small>The Syntax</small></h4>
+		<p>
+			To use the grid system, all column spans must be wrapped in a row class.
+			The column spans in a single row should not exceed 12.
+		</p>
+		<pre>
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-2&quot;&gt;First (2)&lt;/div&gt;
+&lt;div class=&quot;col-4&quot;&gt;Second (4)&lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;Third (6)&lt;/div&gt;
+&lt;/div&gt;</pre>
+		
+		<h4><small>Using Column Spans Without Grid System</small></h4>
+		<a href="#" class="col-4 btn btn-primary btn-block">Button (4)</a>
+		<pre>&lt;a href=&quot;#&quot; class=&quot;col-4 btn btn-primary btn-block&quot;&gt;Button (4)&lt;/a&gt;</pre>
+		
+		<hr>
+						
+		<h4>Mobile First Approach</h4>
+		<h4><small>Small, Default, and Large Column Spans</small></h4>
+		<p>
+			Resize your browser to see the columns respond to different viewport sizes.
+		</p>
+		<div class="row show-grid">
+			<div class="sm-col-2">.sm-col-2</div>
+			<div class="sm-col-4">.sm-col-4</div>
+			<div class="sm-col-6">.sm-col-6</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-2">.col-2</div>
+			<div class="col-4">.col-4</div>
+			<div class="col-6">.col-6</div>
+		</div>
+		<div class="row show-grid">
+			<div class="lg-col-2">.lg-col-2</div>
+			<div class="lg-col-4">.lg-col-4</div>
+			<div class="lg-col-6">.lg-col-6</div>
+		</div>
+		
+		<p>
+			The defualt column spans typically correspond best with the tablet range of resolutions.
+			The small and large correspond to mobile phones and laptops/desktops respectively.
+			All breakpoints are defined mobile-first using ems, so they are fully responsive.
+		</p>
+		
+		<h4><small>The Column Span Classes</small></h4>
+		<p>
+			The small column span classes are:<br>
+			<code>.sm-col-1</code>
+			<code>.sm-col-2</code>
+			<code>.sm-col-3</code>
+			<code>.sm-col-4</code>
+			<code>.sm-col-5</code>
+			<code>.sm-col-6</code>
+			<code>.sm-col-7</code>
+			<code>.sm-col-8</code>
+			<code>.sm-col-9</code>
+			<code>.sm-col-10</code>
+			<code>.sm-col-11</code>
+			<code>.sm-col-12</code>
+			<br>
+		</p>
+		<p>
+			The default column span classes are:<br>
+			<code>.col-1</code>
+			<code>.col-2</code>
+			<code>.col-3</code>
+			<code>.col-4</code>
+			<code>.col-5</code>
+			<code>.col-6</code>
+			<code>.col-7</code>
+			<code>.col-8</code>
+			<code>.col-9</code>
+			<code>.col-10</code>
+			<code>.col-11</code>
+			<code>.col-12</code>
+			<br>
+		</p>
+		<p>
+			The large column span classes are:<br>
+			<code>.lg-col-1</code>
+			<code>.lg-col-2</code>
+			<code>.lg-col-3</code>
+			<code>.lg-col-4</code>
+			<code>.lg-col-5</code>
+			<code>.lg-col-6</code>
+			<code>.lg-col-7</code>
+			<code>.lg-col-8</code>
+			<code>.lg-col-9</code>
+			<code>.lg-col-10</code>
+			<code>.lg-col-11</code>
+			<code>.lg-col-12</code>
+			<br>
+		</p>
+	
+	<h4><small>Mix and Match</small></h4>
+	<p>
+		An element can be given a small, default, and/or large column span to control it's width at different viewport sizes.
+	</p>
+	<div class="row show-grid">
+		<div class="col-4">.col-4</div>
+		<div class="col-8">.col-8</div>
+	</div>
+	<div class="row show-grid">
+		<div class="sm-col-6 col-4 lg-col-9">.sm-col-6<br>.col-4<br>.lg-col-9</div>
+		<div class="sm-col-6 col-8 lg-col-3">.sm-col-6<br>.col-4<br>.lg-col-3</div>
+	</div>
+	<pre>
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;sm-col-6 col-4 lg-col-9&quot;&gt;First (6, 4, 9)&lt;/div&gt;
+&lt;div class=&quot;sm-col-6 col-8 lg-col-3&quot;&gt;Second (6, 8, 3)&lt;/div&gt;
+&lt;/div&gt;</pre>
+	
+	<h4>Nested Grid System</h4>
+	<p>
+		Nesting the grid system is rather straight forward. There are no extra classes that must be used for it to work.
+	</p>
+	<div class="row show-grid">
+		<div class="col-2">First (2)</div>
+		<div class="col-10">
+			Second (3)
+			<div class="row show-grid">
+				<div class="col-4">Second-One (4)</div>
+				<div class="col-8">Second-Two (8)</div>
+			</div>
+		</div>
+	</div>
+	
+	<pre>
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-2&quot;&gt;First (2)&lt;/div&gt;
+&lt;div class=&quot;col-10&quot;&gt;
+Second (3)
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-4&quot;&gt;Second-One (4)&lt;/div&gt;
+&lt;div class=&quot;col-8&quot;&gt;Second-Two (8)&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+	
+	<h4>Helper Classes</h4>
+	<p>
+		Use the <code>.nomarg</code>, <code>.sm-nomarg</code>, and <code>.all-nomarg</code> classes with any <code>.col</code> class to elimate the right margin of the column at the corresponding grid widths.
+	</p>
 
-			<section id="grid" class="section">
-				<h2>Grid System</h2>
-			</section> <!-- END #grid -->
-			
+	</section> <!-- END #grid -->
+	
 <!-- ============================================================================
 .::[ LAYOUT STYLES ]::.
 ============================================================================ -->
 
-			<section id="layout" class="section">
-				<h2>Layout Styles</h2>
-				
+	<section id="layout" class="section">
+		<h2>Layout Styles</h2>
+		
 <!-- Section and Container Styles
 ================================================== -->
-				<h3>Sections & Container</h3>
-				<h4><small>Section</small></h4>
-				<div class="section">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
-				<pre>&lt;div class=&quot;section&quot;&gt;</pre>
-				<h4><small>Section Inverted</small></h4>
-				<p>(Not displayed). <br>For dark backgrounds, use the class "section-invereted" so your text will be a light color.</p>
-				<pre>&lt;div class=&quot;section section-inverted&quot;&gt;</pre>
-				<h4><small>Section Primary</small></h4>
-				<div class="section section-primary">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
-				<pre>&lt;div class=&quot;section section-primary&quot;&gt;</pre>
-				<h4><small>Container</small></h4>
-				<div class="container">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
-				<pre>&lt;div class=&quot;container&quot;&gt;</pre>
-				
-				
+		<h3>Sections & Container</h3>
+		<p class="lead">A section is a full-width divider, that may have a background. The container class confines the content inside it.</p>
+		<h4><small>Section</small></h4>
+		<div class="section">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+		<pre>&lt;div class=&quot;section&quot;&gt;</pre>
+		<h4><small>Section Modifiers</small></h4>
+		<div class="section section-inverted section-primary">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+		<pre>&lt;div class=&quot;section section-inverted section-primary&quot;&gt;</pre>
+		<h4><small>Container</small></h4>
+		<div class="container">Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Vitae in. Cras egestas, laoreet vestibulum. Dignissim egestas, dui volutpat rhoncus, quisque volutpat. Amet neque, nascetur cursus. Pariatur velit, felis arcu libero.</div>
+		<pre>&lt;div class=&quot;container&quot;&gt;</pre>
+		
+		
 <!-- Panel Style
 ================================================== -->
-				<h3>Panels</h3>
-				
-				<div class="row">
-					<div class="col-6">
-						<pre>&lt;div class=&quot;panel&quot;&gt;</pre>
-						<pre>	&lt;div class=&quot;panel-heading&quot;&gt;</pre>
-						<pre>		&lt;div class=&quot;panel-title&quot;&gt;</pre>
-						<pre>	&lt;div class=&quot;panel-body&quot;&gt;</pre>
+		<hr>
+		<h3>Panels</h3>
+		<p class="lead">Panels are objects that offer a stylized container for content. They can have a optional heading.</p>
+		<div class="row">
+			<div class="col-6">
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">Panel Title</h4>
 					</div>
-					<div class="col-6">
-						<div class="panel">
-							<div class="panel-heading">
-								<div class="panel-title">Title of Panel</div>
-							</div>
-							<div class="panel-body">
-								This is the body of the panel.
-								<p>Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Pariatur velit, felis arcu libero.</p>
-							</div>
-						</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, lacus tempor at, urna nisl. Pariatur velit, felis arcu libero.</p>
 					</div>
-				</div> <!-- END .row -->
-				
+				</div>
+			</div>
+			<div class="col-6">
+<pre>
+&lt;div class=&quot;panel&quot;&gt;
+&lt;div class=&quot;panel-heading&quot;&gt;
+&lt;h4 class=&quot;panel-title&quot;&gt;Panel Title&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class=&quot;panel-body&quot;&gt;
+&lt;p&gt;Lorem ipsum dolor&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+			</div>
+		</div> <!-- END .row -->
+		
 <!-- Table Styles
 ================================================== -->
-				
-				<h3>Table Styles</h3>
-				<h4><small>Default Table</small></h4>
-				<table class="table">
+		<hr>
+		<h3>Table Styles</h3>
+		<h4><small>Default Table</small></h4>
+		<p class="lead">
+			Giving tables minimal styling to improve readability is as easy as using one class.
+		</p>
+		<table class="table">
+			<tr>
+				<th>Heading One</th>
+				<th>Heading Two</th>
+				<th>Heading Three</th>
+			</tr>
+			<tr>
+				<td>Table Data</td>
+				<td>Table Data</td>
+				<td>Table Data</td>
+			</tr>
+			<tr>
+				<td>Table Data</td>
+				<td>Table Data</td>
+				<td>Table Data</td>
+			</tr>
+		</table>
+		<div class="row">
+			<div class="col-6">
+				<p>To stylize a table, use <code>.table</code> as a default. To use any modifiers, use <code>.table</code> in addition to the modifier class.</p>
+				<p>The table modifers are <code>.table-condensed</code>, <code>.table-bordered</code>, <code>.table-striped</code>, and <code>.table-hover</code>.</p>
+				<p>To give emphasis to a table row, table header, or table data, use <code>.active</code> on the element.</p>
+			</div>
+			<div class="col-6">
+				<pre>
+&lt;table class=&quot;table&quot;&gt;
+&lt;tr&gt;
+&lt;th&gt;Heading One&lt;/th&gt;
+&lt;th&gt;Heading Two&lt;/th&gt;
+&lt;th&gt;Heading Three&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Table Data&lt;/td&gt;
+&lt;td&gt;Table Data&lt;/td&gt;
+&lt;td&gt;Table Data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+<em>&lt;!-- ... --&gt;</em>
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+			</div>
+		</div>
+	<div class="row">
+	<h4 class="col-6"><small>Table Condensed</small></h4>
+	<h4 class="col-6"><small>Table Bordered</small></h4>
+	</div>
+		<div class="row">
+			<div class="col-6">
+				<table class=" table table-condensed">
 					<tr>
-						<th>Table Heading</th>
 						<th>Table Heading</th>
 						<th>Table Heading</th>
 					</tr>
 					<tr>
 						<td>Table Data</td>
 						<td>Table Data</td>
-						<td>Table Data</td>
 					</tr>
 					<tr>
 						<td>Table Data</td>
 						<td>Table Data</td>
-						<td>Table Data</td>
 					</tr>
 					<tr>
-						<td>Table Data</td>
 						<td>Table Data</td>
 						<td>Table Data</td>
 					</tr>
 				</table>
-				
-			<div class="row">
-			<h4 class="col-6"><small>Table Condensed</small></h4>
-			<h4 class="col-6"><small>Table Bordered</small></h4>
 			</div>
-				<div class="row">
-					<div class="col-6">
-						<table class=" table table-condensed">
-							<tr>
-								<th>Table Heading</th>
-								<th>Table Heading</th>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-						</table>
-					</div>
-					
-					<div class="col-6">
-						<table class=" table table-bordered">
-							<tr>
-								<th>Table Heading</th>
-								<th>Table Heading</th>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-						</table>
-					</div>
-				</div> <!-- END .row -->
-				
-				<div class="row">
-					<div class="col-6">
-<pre>&lt;table class=&quot;table table-condensed&quot;&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</pre>
-					</div>
-					<div class="col-6">
-<pre>&lt;table class=&quot;table table-bordered&quot;&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</pre>
-					</div>
-				</div> <!-- END .row -->
-				
-				<hr>
-				
-				<div class="row">
-				<h4 class="col-6"><small>Table Striped</small></h4>
-				<h4 class="col-6"><small>Table Hover</small></h4>
-				</div>
-				
-				<div class="row">
-					<div class="col-6">
-						<table class=" table table-striped">
-							<tr>
-								<th>Table Heading</th>
-								<th>Table Heading</th>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-						</table>
-					</div>
-					
-					<div class="col-6">
-						<table class=" table table-hover">
-							<tr>
-								<th>Table Heading</th>
-								<th>Table Heading</th>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-							<tr>
-								<td>Table Data</td>
-								<td>Table Data</td>
-							</tr>
-						</table>
-					</div>
-				</div> <!-- END .row -->
-				
-				<div class="row">
-					<div class="col-6">
-<pre>&lt;table class=&quot;table table-striped&quot;&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</pre>
-					</div>
-					<div class="col-6">
-<pre>&lt;table class=&quot;table table-hover&quot;&gt;
-	&lt;tr&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-		&lt;th&gt;Table Heading&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-		&lt;td&gt;Table Data&lt;/td&gt;
-	&lt;/tr&gt;
-&lt;/table&gt;</pre>
-					</div>
-				</div> <!-- END .row -->
+			
+			<div class="col-6">
+				<table class=" table table-bordered">
+					<tr>
+						<th>Table Heading</th>
+						<th>Table Heading</th>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+				</table>
+			</div>
+		</div> <!-- END .row -->
+		<div class="row">
+		<h4 class="col-6"><small>Table Striped</small></h4>
+		<h4 class="col-6"><small>Table Hover</small></h4>
+		</div>
+		
+		<div class="row">
+			<div class="col-6">
+				<table class=" table table-striped">
+					<tr>
+						<th>Table Heading</th>
+						<th>Table Heading</th>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="col-6">
+				<table class=" table table-hover">
+					<tr>
+						<th>Table Heading</th>
+						<th>Table Heading</th>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+					<tr>
+						<td>Table Data</td>
+						<td>Table Data</td>
+					</tr>
+				</table>
+			</div>
+		</div> <!-- END .row -->
+	</section> <!-- END #layout  -->
+	
+<!-- Images and Media
+================================================== -->
+	<section id="images" class="section">
+		<h2>Images and Media</h2>
+
 
 <!-- Image Styles
-================================================== -->			
-				<h3>Images</h3>
-
-
-<!-- Gallery Styles
 ================================================== -->
-				<h3>Gallery</h3>
-			</section> <!-- END #layout  -->
-			
-			<section class="section">
-				<h2>Format Styles</h2>
-			
+		<h3>Image Styles</h3>
+		<p class="lead">
+			Several helper classes are available to make images behave responsively, give them and their context proper styling.
+		</p>
+		
+		<p>
+			Images and figures by default will have a max-width of 100% to prevent them from breaking the layout.
+			You can use <code>.media</code> to contain any content that should behave like a normal image or figure, for example with an embeded video.
+		</p>
+		
+		<p>
+			Here are some basic examples:
+		</p>
+		
+		<div class="row">
+			<div class="col-4">
+				<img src="sample.jpg" />
+				<p class="caption">The caption</p>
+			</div>
+			<div class="col-4">
+				<img src="sample.jpg" class="thumbnail"/>
+			</div>
+			<div class="col-4">
+				<a href="#">
+					<img src="sample.jpg" class="thumbnail"/>
+				</a>
+			</div>
+		</div>
+		
+		<p>
+			To stylize a caption, enclose the text in a <code>.caption</code> or use <code>&lt;figcaption&gt;</code> if it is enclosed within a figure.
+			The caption will be displayed as a block level element, and it would be appropriate to use with <code>&lt;p&gt;</code> or <code>&lt;strong&gt;</code>, etc.
+		</p>
+		<p>
+			Thumbnail styling is also very easy to do, simply use <code>.thumbnail</code> on the image, figure, or media.
+			Thumbnails do not apply a constraint on the media's width, for that you can either contain the media in a class that can constrain width, or give the media a <code>.col-</code> class.
+			Thumbnails also work well when wrapped by an anchor tag.
+		</p>
+		
+		<div class="row">
+		<pre class="col-6">
+&lt;p class=&quot;caption&quot;&gt;The caption text&lt;/p&gt;
+
+&lt;img src=&quot;sample.jpg&quot; class=&quot;col-4&quot; /&gt;
+
+&lt;div class=&quot;col-4&quot;&gt;
+&lt;img src=&quot;sample.jpg&quot; /&gt;
+&lt;/div&gt;</pre>
+		<pre class="col-6">
+&lt;img src=&quot;sample.jpg&quot; class=&quot;thumbnail&quot; /&gt;
+
+&lt;a href=&quot;#&quot;&gt;
+&lt;img src=&quot;sample.jpg&quot; class=&quot;thumbnail&quot; /&gt;
+&lt;/a&gt;</pre>
+		</div>
+
+<!-- Media Crop and Case Objects
+================================================== -->				
+		<hr>
+		<h3>Media Crop and Case Objects</h3>
+		<p class="lead">
+			Media Crop objects can wrap images, iframes, and media to make them behave responsively while maintaining their proportion.
+			Media Case objects help images, iframes, and media behave responsively in accordance to the user's viewport <em>height</em>.
+		</p>
+		
+		<h4><small>Media Crop</small></h4>
+		<p>
+			Overflow in images and media may get cropped off while trying to preserve the proportion.
+			YouTube videos however, scale to fit the proportion without getting cropped.
+		</p>
+		<p>
+			Use <code>.media-crop</code> as the abstract and default class for wrapping images, iframes, and media.
+			The default proportion is 16:9.
+			Modifier classes such as <code>.media-crop-bar</code> must be used in addition to the abstract class <code>.media-crop</code>
+		</p>
+		
+		<div class="row">
+			<div class="col-6">
+				<div class="media-crop">
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/9rIy0xY99a0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<pre>
+&lt;div class=&quot;media-crop&quot;&gt;
+&lt;iframe
+src=&quot;http://www.youtube.com/embed/9rIy0xY99a0&quot;
+frameborder=&quot;0&quot;
+allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+			</div>
+			<div class="col-6">
+				<div class="media-crop media-crop-bar">
+					<img src="sample.jpg" />
+				</div>
+				<pre>
+&lt;div class=&quot;media-crop media-crop-bar&quot;&gt;
+&lt;img src=&quot;sample.jpg&quot; /&gt;
+&lt;/div&gt;</pre>
+			</div>
+		</div>
+		
+		<h4><small>Media Case</small></h4>
+		<p>
+			Notice how media enclosed by a media case object minimize scrolling especially on mobile device viewport resolutions.
+			Use <code>.media-case</code> as the abstract and default class.
+			Optionally, add the modifier <code>.media-case-hero</code> to emphasize the cased media with a background.
+		</p>
+		
+		<div class="row">
+			<div class="col-6">
+				<div class="media-case">
+					<img src="sample-vertical.jpg" />
+				</div>
+				<pre>
+&lt;div class=&quot;media-case&quot;&gt;
+&lt;img src=&quot;sample-vertical.jpg&quot; /&gt;
+&lt;/div&gt;</pre>
+			</div>
+			<div class="col-6">
+				<div class="media-case media-case-hero">
+					<img src="sample-vertical.jpg" />
+				</div>
+			<pre>
+&lt;div class=&quot;media-case media-case-hero&quot;&gt;
+&lt;img src=&quot;sample-vertical.jpg&quot; /&gt;
+&lt;/div&gt;</pre>
+			</div>
+		</div>
+		
+<!-- Gallery Styles
+================================================== -->				
+		<hr>
+		<h3>Gallery Styles</h3>
+		<p class="lead">
+			The built-in CobbleStone Gallery Styles is a convenient extension of the already robust grid system.
+			Gallery Styles enable media to be aligned to the grid, without having to worry about column spans adding up to 12 per row.
+			The markup is semantic and simple, and the styling is consistent and applicable to a variety of uses.
+		</p>
+		<p>
+			The Gallery Styles are built with mobile-first considerations in mind. Overlay transition effects for example will be minimized on smaller resolutions.
+		</p>
+		<h4><small>Gallery Basics</small></h4>
+		<p>
+			Use <code>.gallery</code> on a <code>&lt;ul&gt;</code> to begin a gallery.
+			All gallery items <em>must</em> be enclosed in <code>&lt;li&gt;</code> elements.
+		</p>
+		<ul class="gallery">
+			<li><img src="sample.jpg" /></li>
+			<li><img src="sample.jpg" /></li>
+			<li><img src="sample.jpg" /></li>
+			<li><img src="sample.jpg" /></li>
+			<li><img src="sample.jpg" /></li>
+			<li><img src="sample.jpg" /></li>
+		</ul>
+		<pre>
+&lt;ul class=&quot;gallery&quot;&gt;
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+<em>&lt;!-- ... --&gt;</em>
+&lt;li&gt;&lt;img src=&quot;sample.jpg&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+		
+		<h4><small>Gallery Items Use Cases</small></h4>
+		<p>
+			Gallery items do not necessarily have to be images.
+			Videos and even text content should format nicely as gallery items.
+			Note that the <code>.caption</code> class plays an important role in styling gallery items, especially in the case of gallery items with overlay links.
+		</p>
+
+		<ul class="gallery">
+			<li>
+				<div class="media-crop">
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/9rIy0xY99a0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="gallery-item">
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</li>
+			<li>
+				<strong class="caption">The Caption</strong>
+				<img src="sample.jpg" />
+			</li>
+			<li>
+				<div class="gallery-item">
+					<h5>Item Title</h5>
+					<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs.</p>
+					<strong class="caption">Item Caption</strong>
+				</div>
+			</li>
+		</ul>
+		
+		<div class="row">
+			<div class="col-6">
+				<p>
+					For video, simply add a <code>.media-crop</code> object with a video in the <code>&lt;li&gt;</code> gallery item.
+					Including images is fairly straightforward.
+					To handle text content, use <code>.gallery-item</code> in the <code>&lt;li&gt;</code>, then place all content in <code>.gallery-item</code>.
+					All of these styles can be mix and matched rather intuitively.
+				</p>						
+			</div>
+			<div class="col-6">
+				<pre>
+&lt;ul class=&quot;gallery&quot;&gt;
+&lt;li&gt;
+&lt;img src=&quot;sample.jpg&quot; /&gt;
+&lt;div class=&quot;gallery-item&quot;&gt;
+&lt;h3&gt;Item Title&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</pre>
+			</div>
+		</div>
+
+		<h4><small>Gallery Items With Links</small></h4>
+		<p>
+			Adding links to a gallery item is extremely easy and very stylish!
+			By default links with a <code>.caption</code> element will have an overlay effect on hover.
+			In the example below, the first one is missing a <code>.caption</code>, so no overlay is visible.
+		</p>
+		<ul class="gallery">
+			<li>
+				<a href="#">
+					<img src="sample.jpg" />
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<strong class="caption">Item Caption</strong>
+					<img src="sample.jpg" />
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="gallery-item">
+						<h5>Item Title</h5>
+						<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.</p>
+					</div>
+					<strong class="caption">Item Caption</strong>
+				</a>
+			</li>
+		</ul>
+		<div class="row">
+			<div class="col-6">
+				To give a gallery item a link, enclose all of its contents in a <code>&lt;a&gt;</code> tag.
+				For the overlay effect to work, include a <code>.caption</code> directly inside the <code>&lt;a&gt;</code> tag.
+				Link overlays will work for images, videos, and <code>.gallery-item</code> text content.
+			</div>
+			<div class="col-6">
+				<pre>
+&lt;li&gt;
+&lt;a href=&quot;#&quot;&gt;
+&lt;div class=&quot;gallery-item&quot;&gt;
+&lt;h5&gt;Item Title&lt;/h5&gt;
+&lt;p&gt;The quick, brown fox jumps.&lt;/p&gt;
+&lt;/div&gt;
+&lt;strong class=&quot;caption&quot;&gt;Item Caption&lt;/strong&gt;
+&lt;/a&gt;
+&lt;/li&gt;</pre>
+			</div>
+		</div>
+		
+		<h4><small>Gallery Items With Links (Modifiers)</small></h4>
+		<p>
+			There might be a situation where a gallery item should have a link, but the overlay button is unnecessary.
+			To remove the button in this case, use <code>.no-btn</code> on the <code>&lt;a&gt;</code> tag.
+		</p>
+		<p>
+			Sometiems, there might be a scenario where you do not want link overlays, but still want to take advantage of gallery item captions.
+			In this case, use <code>.no-style</code> on the <code>&lt;a&gt;</code> tag.
+		</p>
+						<ul class="gallery">
+			<li>
+				<a href="#">
+					<img src="sample.jpg" />
+				</a>
+			</li>
+			<li>
+				<a href="#" class="no-style">
+					<img src="sample.jpg" />
+					<strong class="caption">No Style Link With Caption</strong>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="no-btn">
+					<div class="gallery-item">
+						<h5>Item Title</h5>
+						<p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.</p>
+					</div>
+					<strong class="caption">No Button Overlay</strong>
+				</a>
+			</li>
+		</ul>
+
+		
+	</section> <!-- END #images -->
+	
+	<section id="format" class="section">
+		<h2>Format Styles</h2>
+	
 <!--   Text Color Styles
 ================================================== -->	
-				<h3>Text Color</h3>
-				<div class="row">
-					<div class="col-8">
-						<p class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
-					</div>
-					<div class="col-4">
-					<pre>&lt;p class=&quot;text-muted&quot;&gt;</pre>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-8">
-						<p class="text-primary">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
-					</div>
-					<div class="col-4">
-						<pre>&lt;p class=&quot;text-primary&quot;&gt;</pre>	
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-8">
-						<p class="text-alt">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large.</p>
-					</div>
-					<div class="col-4">
-						<pre>&lt;p class=&quot;text-alt&quot;&gt;</pre>
-					</div>
-				</div>
-					
-				<h3>Text Alignment</h3>
-				<div class="row">
-					<div class="col-4">
-					<pre>&lt;p class=&quot;text-right&quot;&gt;<br><br>&lt;p class=&quot;text-left&quot;&gt;</pre>
-					</div>
-					<div class="col-8">
-						<p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-4">
-					<pre>&lt;p class=&quot;text-center&quot;&gt;</pre>
-					</div>
-					<div class="col-8">
-						<p class="text-center">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-4">
-					<pre>&lt;p class=&quot;text-justify&quot;&gt;</pre>
-					</div>
-					<div class="col-8">
-						<p class="text-justify">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language o</p>
-					</div>
-				</div>
-				
-				<h3>Text Labels</h3>
-				
-				<p><b>Default Label: </b><span class="label label-default">consectetuer adipiscing</span></p>
-				<pre>&lt;span class=&quot;label label-default&quot;&gt;</pre><br>
-				<p><b>Primary Label: </b><span class="label label-primary">consectetuer adipiscing</span></p>
-				<pre>&lt;span class=&quot;label label-primary&quot;&gt;</pre><br>
-				<p><b>Alternate Label: </b><span class="label label-alt">consectetuer adipiscing</span></p>
-				<pre>&lt;span class=&quot;label label-alt&quot;&gt;</pre><br>
-				<hr>
-					
-				<h3>Buttons</h3>
-					<div class="row">
-						<div class="col-5">
-							<div class="btn">
-								No Style Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-block">
-								Block Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-block&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-big">
-								Big Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-big&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-small">
-								Small Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-small&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-default">
-								Default Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-default&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-flat">
-								Flat Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-flat&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-primary">
-								Primary Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-primary&quot;&gt;</pre>
-						</div>
-					</div>
-					
-					<br>
-						
-					<div class="row">
-						<div class="col-5">
-							<div class="btn btn-block btn-big btn-flat btn-primary">
-								Combined Button
-							</div>
-						</div>
-						<div class="col-7">
-							<pre>&lt;button class=&quot;btn btn-block btn-big btn-flat btn-primary&quot;&gt;</pre>
-						</div>
-					</div>
-					
-				
+		<h3>Text Color</h3>
+		<div class="row">
+			<div class="col-8">
+				<p class="text-muted">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+			</div>
+			<div class="col-4">
+			<pre>&lt;p class=&quot;text-muted&quot;&gt;</pre>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-8">
+				<p class="text-primary">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
+			</div>
+			<div class="col-4">
+				<pre>&lt;p class=&quot;text-primary&quot;&gt;</pre>	
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-8">
+				<p class="text-alt">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large.</p>
+			</div>
+			<div class="col-4">
+				<pre>&lt;p class=&quot;text-alt&quot;&gt;</pre>
+			</div>
+		</div>
+			
+		<hr>
+		<h3>Text Alignment</h3>
+		<div class="row">
+			<div class="col-4">
+			<pre>&lt;p class=&quot;text-right&quot;&gt;<br><br>&lt;p class=&quot;text-left&quot;&gt;</pre>
+			</div>
+			<div class="col-8">
+				<p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+			<pre>&lt;p class=&quot;text-center&quot;&gt;</pre>
+			</div>
+			<div class="col-8">
+				<p class="text-center">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymph</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+			<pre>&lt;p class=&quot;text-justify&quot;&gt;</pre>
+			</div>
+			<div class="col-8">
+				<p class="text-justify">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language o</p>
+			</div>
+		</div>
+		
+		<hr>
+		<h3>Text Labels</h3>
+		
+		<p><b>Default Label: </b><span class="label label-default">consectetuer adipiscing</span></p>
+		<pre>&lt;span class=&quot;label label-default&quot;&gt;</pre><br>
+		<p><b>Primary Label: </b><span class="label label-primary">consectetuer adipiscing</span></p>
+		<pre>&lt;span class=&quot;label label-primary&quot;&gt;</pre><br>
+		<p><b>Alternate Label: </b><span class="label label-alt">consectetuer adipiscing</span></p>
+		<pre>&lt;span class=&quot;label label-alt&quot;&gt;</pre><br>
+		<hr>
 			
 <!-- Form Style
 ================================================== -->
-				<h3>Forms</h3>
-				
-			</section> <!-- END section -->
+		<h3>Buttons</h3>
+		<p class="lead">
+			Buttons have a very pleasing interactivity to them, and they are styled with subtle shadows to afford user interaction.
+			These styles will work on anchor tags as well as button tags.
+		</p>
+		<p>
+			Typically, the <code>.btn</code> class is treated as an abstract class, so it should be accompanied with a <code>.btn-default</code> or some other color modifier class.
+			However, using <code>.btn</code> without a color modifier class may still be sufficient in some cases.
+		</p>
+		<p>Note that by default, buttons have a slight margin applied to them. Use <code>.btn-block</code> to make a block-level button with no margins, capable of aligning perfectly with the grid.</p>
+			<div class="row">
+				<div class="col-5">
+					<div class="btn">
+						No Style Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn&quot;&gt;</pre>
+				</div>
+			</div>
 			
-		</div> <!-- END wrapper -->
-	</main>
-</div> <!-- END .row -->
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-block">
+						Block Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-block&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-big">
+						Big Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-big&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-small">
+						Small Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-small&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-default">
+						Default Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-default&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-flat">
+						Flat Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-flat&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-primary">
+						Primary Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-primary&quot;&gt;</pre>
+				</div>
+			</div>
+			
+			<br>
+				
+			<div class="row">
+				<div class="col-5">
+					<div class="btn btn-block btn-big btn-primary">
+						Combined Button
+					</div>
+				</div>
+				<div class="col-7">
+					<pre>&lt;button class=&quot;btn btn-block btn-big btn-primary&quot;&gt;</pre>
+				</div>
+			</div>
+			
+		
+	
+<!-- Form Style
+================================================== -->
+		<hr>
+		<h3>Forms</h3>
+		<p class="lead">
+			Forms are subtley styled even with just the basic markup.
+			The input fields certainly afford user interaction.
+		</p>
+		<p>
+			By default, input fields behave like block elements, taking up 100% of the width of their parent container.
+		</p>
+		
+		<div class="row">
+			<form class="col-6">
+				<p>
+					<label for="username">Username</label>
+					<input type="text" placeholder="First Last" name="username">
+				</p>
+				<p>
+					<label for="email">Email</label>
+					<input type="email" placeholder="email@example.com" name="email">
+				</p>
+				<p>
+					<label for="options">Select Something</label>
+					<select name="options">
+						<option>Option A</option>
+						<option>Option B</option>
+						<option>Option C</option>
+					</select>
+				</p>
+				<p>
+					<label for="check"><input type="checkbox" id="check"> Check me!</label>
+				</p>
+				<p>
+					<input type="checkbox" id="toggle">
+					<label for="toggle">Check me also!</label>
+				</p>
+				<p>
+					<label for="comment">Leave a Comment</label>
+					<textarea placeholder="Say something..." name="comment"></textarea>
+				</p>
+			</form>
+			<pre class="col-6">
+&lt;form class=&quot;col-6&quot;&gt;
+&lt;p&gt;
+&lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;First Last&quot; name=&quot;username&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;email@example.com&quot; name=&quot;email&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;label for=&quot;options&quot;&gt;Select Something&lt;/label&gt;
+&lt;select name=&quot;options&quot;&gt;
+&lt;option&gt;Option A&lt;/option&gt;
+&lt;option&gt;Option B&lt;/option&gt;
+&lt;option&gt;Option C&lt;/option&gt;
+&lt;/select&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;label for=&quot;check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;check&quot;&gt; Check me!&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;
+&lt;label for=&quot;toggle&quot;&gt;Check me also!&lt;/label&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;label for=&quot;comment&quot;&gt;Leave a Comment&lt;/label&gt;
+&lt;textarea placeholder=&quot;Say something...&quot; name=&quot;comment&quot;&gt;&lt;/textarea&gt;
+&lt;/p&gt;
+&lt;/form&gt;						
+			</pre>
+		</div>
+	</section> <!-- END section -->
+	
+	
+	<section id="helper" class="section">
+		<h2>Helper Styles</h2>
+		<p class="lead">Several helper classes are provided in CobbleStone to help with prototyping and designing common layouts with markup.</p>
+		<p>
+			To float elements, first use <code>.row</code> in the parent container for a clearfix.
+			Use <code>.pull-right</code> or <code>.pull-left</code> to float accordingly.
+			A <code>.pull-center</code> class is also provided, but it is important to note that this class does not use a float to center the element.
+			Instead, <code>.pull-center</code> sets the left and right margins to auto, so the element should be a block level elment for this to work.
+		</p>
+		<p>
+			To control the display of an element, use the class <code>.hidden</code> to collapse the element entirely, <code>.invisible</code> to reserve the element's space but be entirely invisible, and <code>.show</code> to set an object's display to block level and visibility to visible.
+		</p>
+	
+	</section>
+	
+	<section id="print" class="section">
+		<h2>Print Styles</h2>
+		<p class="lead">
+			The print styles used in CobbleStone are based off of the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> print styles.
+			Please be sure that the print styles are the last CSS styles to be read by the browser, this way they can override all other styles for printing.
+		</p>
+	</section>
+</main>
 
 
 
@@ -673,14 +1208,15 @@
 ================================================== -->
 <footer>
 	<div class="container">
+		<br>
 		<hr>
 		<p>
-			View the HTML and CSS source code for more detail.<br />
+			Inspect the HTML and CSS source code for more detail.<br />
 			Feel free to modify the boilerplate to suit your needs.<br />
 			Happy Designing!
 		</p>
 		<small>
-			<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">CobbleStone Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://shethworks.com" property="cc:attributionName" rel="cc:attributionURL">Arpit Sheth</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.	
+			<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">CobbleStone Boilerplate</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://shethworks.com" property="cc:attributionName" rel="cc:attributionURL">Arpit Sheth & Deep Sheth</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.	
 		</small>
 	</div>
 </footer>
